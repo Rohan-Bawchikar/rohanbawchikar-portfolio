@@ -53,6 +53,7 @@ html,
 body {
 	width: 100%;
 	height: 100%;
+	overflow-x: hidden;
 }
 
 body {
@@ -3913,6 +3914,7 @@ body.cursor-hover .cursor-outline {
 				rgba(59, 130, 246, 0.3));
 	}
 }
+
 /* ===================================
    PARALLAX SCROLL EFFECTS
    =================================== */
@@ -3952,7 +3954,15 @@ body.cursor-hover .cursor-outline {
 
 /* Large Desktop (1400px+) */
 @media (min-width: 1400px) {
-	.home, .about, .projects, .services, .experience, .skills, .certifications, .contact {
+
+	.home,
+	.about,
+	.projects,
+	.services,
+	.experience,
+	.skills,
+	.certifications,
+	.contact {
 		max-width: 1600px;
 		margin-left: auto;
 		margin-right: auto;
@@ -3961,67 +3971,384 @@ body.cursor-hover .cursor-outline {
 
 /* Tablet & Small Desktop (768px - 992px) */
 @media (max-width: 992px) {
-	h1 { font-size: 40px; }
-	.heading { font-size: 36px; }
-	.navbar { padding: 15px 5%; }
-	.navbar ul li { margin-left: 20px; }
-	.home { padding: 120px 5% 80px; }
-	
-	.profile-photo-container { width: 380px; height: 380px; }
-	.photo-frame { width: 300px; height: 300px; }
-	.photo-particles { width: 340px; height: 340px; }
-	.ring-1 { width: 320px; height: 320px; }
-	.ring-2 { width: 360px; height: 360px; }
-	.ring-3 { width: 400px; height: 400px; }
-	
-	.about, .projects, .services, .experience, .skills, .certifications { padding: 80px 5%; }
-	.skills-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-	.cert-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+	h1 {
+		font-size: 40px;
+	}
+
+	.heading {
+		font-size: 36px;
+	}
+
+	.navbar {
+		padding: 15px 5%;
+	}
+
+	.navbar ul li {
+		margin-left: 20px;
+	}
+
+	.home {
+		padding: 120px 5% 80px;
+	}
+
+	.profile-photo-container {
+		width: 380px;
+		height: 380px;
+	}
+
+	.photo-frame {
+		width: 300px;
+		height: 300px;
+	}
+
+	.photo-particles {
+		width: 340px;
+		height: 340px;
+	}
+
+	.ring-1 {
+		width: 320px;
+		height: 320px;
+	}
+
+	.ring-2 {
+		width: 360px;
+		height: 360px;
+	}
+
+	.ring-3 {
+		width: 400px;
+		height: 400px;
+	}
+
+	.about,
+	.projects,
+	.services,
+	.experience,
+	.skills,
+	.certifications {
+		padding: 80px 5%;
+	}
+
+	.skills-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+
+	.cert-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
 }
 
 /* Mobile & Small Tablets (< 768px) */
 @media (max-width: 768px) {
-	h1 { font-size: 32px; line-height: 1.2; }
-	.heading { font-size: 28px; }
-	h3 { font-size: 18px; }
-	p { font-size: 14px; }
-	
-	.navbar { padding: 12px 5%; }
-	.home { flex-direction: column; padding: 100px 5% 60px; text-align: center; gap: 40px; }
-	
-	.profile-photo-container { width: 280px; height: 280px; margin: 0 auto; order: -1; }
-	.photo-frame { width: 220px; height: 220px; }
-	.photo-particles { width: 260px; height: 260px; }
-	.ring-1, .ring-2, .ring-3 { display: none; }
-	.photo-status { bottom: 20px; padding: 6px 14px; }
-	.status-text { font-size: 11px; }
-	
-	.home-info { max-width: 100%; }
-	.hero-logo { font-size: 60px; }
-	.btn-sci { flex-direction: column; gap: 20px; align-items: center; }
-	.sci { justify-content: center; }
-	
-	.about, .projects, .services, .experience, .skills, .certifications, .contact { padding: 60px 5%; }
-	.project-grid, .service-grid, .skills-grid, .cert-grid, .experience-grid { grid-template-columns: 1fr; }
-	
-	.category-header { flex-direction: column; text-align: center; gap: 12px; }
-	.category-title { font-size: 20px; }
-	.skill-hexagon { width: 60px; height: 60px; }
-	.skill-icon { width: 28px; height: 28px; }
-	
-	.cert-card-inner { padding: 24px 18px; min-height: 350px; }
-	.particles { opacity: 0.3; }
-	.cert-particle:nth-child(n+4), .photo-orb-3, .skills-orb-3 { display: none; }
+	h1 {
+		font-size: 32px;
+		line-height: 1.2;
+	}
+
+	.heading {
+		font-size: 28px;
+	}
+
+	h3 {
+		font-size: 18px;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+	.navbar {
+		padding: 12px 5%;
+	}
+
+	.navbar .logo {
+		font-size: 24px;
+	}
+
+	.logo-mark {
+		width: 28px;
+		height: 28px;
+		font-size: 12px;
+	}
+
+	.logo-text {
+		font-size: 20px;
+	}
+
+	.home {
+		flex-direction: column;
+		padding: 100px 5% 60px;
+		text-align: center;
+		gap: 30px;
+		min-height: 100vh;
+		justify-content: center;
+	}
+
+	.profile-photo-container {
+		width: 240px;
+		height: 240px;
+		margin: 0 auto;
+		order: -1;
+		flex-shrink: 0;
+	}
+
+	.photo-frame {
+		width: 190px;
+		height: 190px;
+	}
+
+	.photo-particles {
+		width: 220px;
+		height: 220px;
+	}
+
+	.ring-1,
+	.ring-2,
+	.ring-3 {
+		display: none;
+	}
+
+	.photo-status {
+		bottom: 15px;
+		padding: 5px 12px;
+	}
+
+	.status-text {
+		font-size: 10px;
+	}
+
+	.status-dot {
+		width: 6px;
+		height: 6px;
+	}
+
+	.home-info {
+		max-width: 100%;
+		padding: 0 10px;
+		overflow: hidden;
+	}
+
+	/* Hero Logo - Critical Fix for Mobile */
+	.hero-logo {
+		margin-bottom: 12px;
+		max-width: 100%;
+		overflow: hidden;
+	}
+
+	.hero-logo .logo-word {
+		font-size: clamp(32px, 12vw, 56px) !important;
+		line-height: 1;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		max-width: 100%;
+	}
+
+	.hero-logo .logo-glow {
+		width: clamp(40px, 10vw, 80px);
+		height: clamp(40px, 10vw, 80px);
+	}
+
+	.hero-logo .logo-sign {
+		font-size: clamp(18px, 5vw, 36px) !important;
+		right: 5px;
+		bottom: -6px;
+	}
+
+	.home-info h1 {
+		font-size: 28px;
+		line-height: 1.3;
+		word-wrap: break-word;
+	}
+
+	.home-info h2 {
+		font-size: 18px;
+		margin-top: -4px;
+	}
+
+	.home-info p {
+		font-size: 14px;
+		line-height: 1.6;
+		margin: 12px 0 20px;
+	}
+
+	.btn-sci {
+		flex-direction: column;
+		gap: 15px;
+		align-items: center;
+		width: 100%;
+	}
+
+	.sci {
+		justify-content: center;
+		display: flex;
+		gap: 15px;
+	}
+
+	.sci a {
+		margin-left: 0;
+	}
+
+	.btn {
+		padding: 12px 28px;
+		font-size: 15px;
+		width: fit-content;
+	}
+
+	.about,
+	.projects,
+	.services,
+	.experience,
+	.skills,
+	.certifications,
+	.contact {
+		padding: 60px 5%;
+	}
+
+	.project-grid,
+	.service-grid,
+	.skills-grid,
+	.cert-grid,
+	.experience-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.services-list {
+		grid-template-columns: 1fr;
+	}
+
+	.category-header {
+		flex-direction: column;
+		text-align: center;
+		gap: 12px;
+	}
+
+	.category-title {
+		font-size: 20px;
+	}
+
+	.skill-hexagon {
+		width: 60px;
+		height: 60px;
+	}
+
+	.skill-icon {
+		width: 28px;
+		height: 28px;
+	}
+
+	.cert-card-inner {
+		padding: 24px 18px;
+		min-height: 350px;
+	}
+
+	.particles {
+		opacity: 0.3;
+	}
+
+	.cert-particle:nth-child(n+4),
+	.photo-orb-3,
+	.skills-orb-3 {
+		display: none;
+	}
 }
 
 /* Extra Small Mobile (< 480px) */
 @media (max-width: 480px) {
-	h1 { font-size: 28px; }
-	.heading { font-size: 24px; }
-	.profile-photo-container { width: 240px; height: 240px; }
-	.photo-frame { width: 180px; height: 180px; }
-	.photo-particles { width: 220px; height: 220px; }
-	.btn { padding: 10px 24px; font-size: 14px; }
+	body {
+		overflow-x: hidden;
+	}
+
+	h1 {
+		font-size: 24px;
+	}
+
+	.heading {
+		font-size: 22px;
+	}
+
+	.navbar {
+		padding: 10px 4%;
+	}
+
+	.navbar .logo {
+		font-size: 20px;
+	}
+
+	.logo-mark {
+		width: 24px;
+		height: 24px;
+		font-size: 11px;
+	}
+
+	.home {
+		padding: 90px 4% 50px;
+		gap: 25px;
+	}
+
+	.profile-photo-container {
+		width: 200px;
+		height: 200px;
+	}
+
+	.photo-frame {
+		width: 160px;
+		height: 160px;
+	}
+
+	.photo-particles {
+		width: 180px;
+		height: 180px;
+	}
+
+	.photo-status {
+		padding: 4px 10px;
+	}
+
+	.status-text {
+		font-size: 9px;
+	}
+
+	.hero-logo .logo-word {
+		font-size: clamp(28px, 10vw, 48px) !important;
+	}
+
+	.hero-logo .logo-sign {
+		font-size: clamp(16px, 4.5vw, 28px) !important;
+	}
+
+	.home-info h1 {
+		font-size: 24px;
+	}
+
+	.home-info h2 {
+		font-size: 16px;
+	}
+
+	.home-info p {
+		font-size: 13px;
+	}
+
+	.btn {
+		padding: 10px 22px;
+		font-size: 14px;
+	}
+
+	.sci a {
+		font-size: 20px;
+	}
+
+	.about,
+	.projects,
+	.services,
+	.experience,
+	.skills,
+	.certifications,
+	.contact {
+		padding: 50px 4%;
+	}
 }
 
 /* ===================================
@@ -4029,7 +4356,12 @@ body.cursor-hover .cursor-outline {
    =================================== */
 
 /* GPU Acceleration */
-.profile-photo-container, .cert-card, .skill-card, .project-card, .layer-back, .layer-front {
+.profile-photo-container,
+.cert-card,
+.skill-card,
+.project-card,
+.layer-back,
+.layer-front {
 	-webkit-transform: translateZ(0);
 	-moz-transform: translateZ(0);
 	transform: translateZ(0);
@@ -4038,7 +4370,10 @@ body.cursor-hover .cursor-outline {
 }
 
 /* Backdrop Filter Fallbacks */
-.navbar, .cert-card-inner, .skill-card-inner, .photo-status {
+.navbar,
+.cert-card-inner,
+.skill-card-inner,
+.photo-status {
 	background-color: rgba(255, 255, 255, 0.06);
 	-webkit-backdrop-filter: blur(20px);
 	backdrop-filter: blur(20px);
@@ -4046,14 +4381,20 @@ body.cursor-hover .cursor-outline {
 
 /* Touch Device Optimizations */
 @media (hover: none) and (pointer: coarse) {
-	.btn, .cert-download-btn, .navbar ul li a {
+
+	.btn,
+	.cert-download-btn,
+	.navbar ul li a {
 		min-height: 44px;
 		min-width: 44px;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
 	}
-	.photo-particles, .cert-particles, .skills-orb {
+
+	.photo-particles,
+	.cert-particles,
+	.skills-orb {
 		animation-duration: 25s;
 	}
 }
@@ -4081,9 +4422,17 @@ body.cursor-hover .cursor-outline {
 	transition: 0.25s ease-in-out;
 }
 
-.menu-toggle span:nth-child(1) { top: 0px; }
-.menu-toggle span:nth-child(2) { top: 10px; }
-.menu-toggle span:nth-child(3) { top: 20px; }
+.menu-toggle span:nth-child(1) {
+	top: 0px;
+}
+
+.menu-toggle span:nth-child(2) {
+	top: 10px;
+}
+
+.menu-toggle span:nth-child(3) {
+	top: 20px;
+}
 
 .menu-toggle.active span:nth-child(1) {
 	top: 10px;
@@ -4101,8 +4450,10 @@ body.cursor-hover .cursor-outline {
 }
 
 @media (max-width: 768px) {
-	.menu-toggle { display: block; }
-	
+	.menu-toggle {
+		display: block;
+	}
+
 	#navMenu {
 		position: fixed;
 		top: 70px;
@@ -4119,16 +4470,18 @@ body.cursor-hover .cursor-outline {
 		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 		z-index: 999;
 	}
-	
-	#navMenu.active { left: 0; }
-	
+
+	#navMenu.active {
+		left: 0;
+	}
+
 	#navMenu li {
 		margin: 0;
 		width: 100%;
 		text-align: center;
 		padding: 15px 0;
 	}
-	
+
 	#navMenu li a {
 		display: block;
 		font-size: 18px;
