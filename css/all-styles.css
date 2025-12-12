@@ -3950,10 +3950,48 @@ body.cursor-hover .cursor-outline {
 
 /* ===================================
    COMPREHENSIVE RESPONSIVE DESIGN
+   Optimized for ALL Chrome DevTools devices
    =================================== */
 
-/* Large Desktop (1400px+) */
-@media (min-width: 1400px) {
+/* Extra Large Displays - Nest Hub Max, 4K */
+@media (min-width: 1600px) {
+
+	.home,
+	.about,
+	.projects,
+	.services,
+	.experience,
+	.skills,
+	.certifications,
+	.contact {
+		max-width: 1800px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+	.heading {
+		font-size: 54px;
+	}
+
+	.home-info h1 {
+		font-size: 64px;
+	}
+
+	.profile-photo-container {
+		width: 500px;
+		height: 500px;
+	}
+
+	.photo-frame {
+		width: 400px;
+		height: 400px;
+	}
+}
+
+/* Large Desktop (1400px+) - Surface Pro 7, Large Laptops */
+@media (min-width: 1400px) and (max-width: 1599px) {
 
 	.home,
 	.about,
@@ -4041,6 +4079,131 @@ body.cursor-hover .cursor-outline {
 	}
 }
 
+/* Tablet Portrait - iPad Pro, iPad Air (820px - 1024px) */
+@media (min-width: 820px) and (max-width: 1024px) {
+	.home {
+		padding: 140px 6% 100px;
+		gap: 50px;
+	}
+
+	.profile-photo-container {
+		width: 420px;
+		height: 420px;
+	}
+
+	.photo-frame {
+		width: 340px;
+		height: 340px;
+	}
+
+	.hero-logo .logo-word {
+		font-size: clamp(60px, 8vw, 90px);
+	}
+
+	.services-list {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 28px;
+	}
+
+	.experience-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 28px;
+	}
+
+	.skills-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.cert-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/* Tablet Portrait - iPad Mini, Small Tablets (768px - 820px) */
+@media (min-width: 768px) and (max-width: 819px) {
+	.home {
+		padding: 130px 5% 90px;
+		flex-direction: row;
+		text-align: left;
+	}
+
+	.home-info {
+		max-width: 55%;
+	}
+
+	.profile-photo-container {
+		width: 350px;
+		height: 350px;
+		margin: 0;
+		order: 2;
+	}
+
+	.photo-frame {
+		width: 280px;
+		height: 280px;
+	}
+
+	.hero-logo .logo-word {
+		font-size: clamp(48px, 7vw, 72px);
+	}
+
+	.services-list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.experience-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/* Landscape Tablets & Foldables - Galaxy Z Fold 5, Surface Duo */
+@media (min-width: 768px) and (max-width: 992px) and (orientation: landscape) {
+	.home {
+		min-height: 100vh;
+		padding: 100px 6% 70px;
+	}
+
+	.hero-logo .logo-word {
+		font-size: clamp(40px, 6vw, 64px);
+	}
+
+	.profile-photo-container {
+		width: 320px;
+		height: 320px;
+	}
+
+	.photo-frame {
+		width: 260px;
+		height: 260px;
+	}
+}
+
+/* Large Phones - iPhone 14 Pro Max, Galaxy S20 Ultra, Pixel 7 (430px - 480px) */
+@media (min-width: 430px) and (max-width: 767px) {
+	.hero-logo .logo-word {
+		font-size: clamp(36px, 11vw, 52px);
+	}
+
+	.home-info h1 {
+		font-size: 30px;
+	}
+
+	.profile-photo-container {
+		width: 260px;
+		height: 260px;
+	}
+
+	.photo-frame {
+		width: 200px;
+		height: 200px;
+	}
+
+	.btn {
+		padding: 13px 30px;
+		font-size: 15px;
+	}
+}
+
 /* Mobile & Small Tablets (< 768px) */
 @media (max-width: 768px) {
 	h1 {
@@ -4080,11 +4243,12 @@ body.cursor-hover .cursor-outline {
 
 	.home {
 		flex-direction: column;
-		padding: 100px 5% 60px;
+		padding: 90px 4% 50px;
 		text-align: center;
-		gap: 30px;
+		gap: 25px;
 		min-height: 100vh;
-		justify-content: center;
+		justify-content: flex-start;
+		overflow-x: hidden;
 	}
 
 	.profile-photo-container {
@@ -4127,23 +4291,28 @@ body.cursor-hover .cursor-outline {
 
 	.home-info {
 		max-width: 100%;
-		padding: 0 10px;
+		width: 100%;
+		padding: 0;
 		overflow: hidden;
 	}
 
 	/* Hero Logo - Critical Fix for Mobile */
 	.hero-logo {
-		margin-bottom: 12px;
+		margin-bottom: 8px;
 		max-width: 100%;
+		width: 100%;
 		overflow: hidden;
+		display: none;
 	}
 
 	.hero-logo .logo-word {
-		font-size: clamp(32px, 12vw, 56px) !important;
-		line-height: 1;
+		font-size: clamp(24px, 9vw, 40px) !important;
+		line-height: 0.9;
 		word-wrap: break-word;
 		overflow-wrap: break-word;
 		max-width: 100%;
+		width: 100%;
+		display: block;
 	}
 
 	.hero-logo .logo-glow {
@@ -4158,20 +4327,24 @@ body.cursor-hover .cursor-outline {
 	}
 
 	.home-info h1 {
-		font-size: 28px;
-		line-height: 1.3;
+		font-size: 24px !important;
+		line-height: 1.2;
 		word-wrap: break-word;
+		margin: 8px 0;
+		padding: 0 5px;
 	}
 
 	.home-info h2 {
-		font-size: 18px;
-		margin-top: -4px;
+		font-size: 16px !important;
+		margin-top: 0;
+		padding: 0 5px;
 	}
 
 	.home-info p {
-		font-size: 14px;
-		line-height: 1.6;
-		margin: 12px 0 20px;
+		font-size: 13px;
+		line-height: 1.5;
+		margin: 8px 0 16px;
+		padding: 0 8px;
 	}
 
 	.btn-sci {
