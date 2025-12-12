@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rohan Bawchikar</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-KW84eH12b8sD7xS8a3K6sCHCZxjzGAFR+th5ZRGgUpxIbT7FKpX59q8mDJv6D+6z++lghYdI1cXmfQ6VdGUYAw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <!-- Floating Particles -->
+  <div class="particles" id="particles" aria-hidden="true"></div>
+
+  <div class="parallax" aria-hidden="true">
+    <div class="layer layer-back"></div>
+    <div class="layer layer-front"></div>
+  </div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#" class="logo"><span class="logo-mark">RB</span><span class="logo-text">Portfolio</span></a>
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul id="navMenu">
+      <li class="active"><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">My Journey</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="theme-toggle" class="theme-switch" aria-label="Toggle dark mode" title="Toggle theme">
+      <div class="toggle-container">
+        <div class="toggle-particles" aria-hidden="true"></div>
+        <div class="toggle-glow"></div>
+        <div class="toggle-orb">
+          <div class="orb-core"></div>
+          <div class="orb-rays"></div>
+          <div class="orb-craters"></div>
+        </div>
+        <div class="toggle-trail"></div>
+      </div>
+    </button>
+    <span id="theme-label" class="theme-label">Dark mode</span>
+  </nav>
+
+  <!-- Home Section -->
+  <section class="home" id="home">
+
+    <div class="home-info">
+      <div class="hero-logo" aria-hidden="true">
+        <span class="logo-word">Portfolio</span>
+        <span class="logo-glow"></span>
+        <span class="logo-sign">Rohan Bawchikar</span>
+      </div>
+      <h1>Rohan Bhushan Bawchikar</h1>
+      <h2 class="typing-container">
+        <span class="typing-text" id="typingText"></span>
+        <span class="typing-cursor">|</span>
+      </h2>
+      <p>
+        I'm a passionate Frontend Developer dedicated to creating visually appealing,
+        responsive, and user-friendly web interfaces using HTML, CSS, JavaScript,
+        and React.js. I love transforming ideas into interactive experiences that
+        deliver both style and functionality.
+      </p>
+
+      <div class="btn-sci">
+        <a href="Rohan's Resume-hackerresume.pdf" download class="btn">Download CV</a>
+        <div class="sci">
+          <a href="https://www.linkedin.com/in/rohan-bhushan-bawchikar-25725724a/" target="_blank" rel="noopener"
+            title="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/rohanbawchikar" target="_blank" rel="noopener" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- EPIC PROFILE PHOTO -->
+    <div class="profile-photo-container" data-animate>
+      <div class="photo-orb-bg">
+        <div class="photo-orb photo-orb-1"></div>
+        <div class="photo-orb photo-orb-2"></div>
+        <div class="photo-orb photo-orb-3"></div>
+      </div>
+
+      <div class="photo-wrapper">
+        <div class="photo-glow-ring ring-1"></div>
+        <div class="photo-glow-ring ring-2"></div>
+        <div class="photo-glow-ring ring-3"></div>
+
+        <div class="photo-particles">
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+        </div>
+
+        <div class="photo-frame">
+          <div class="photo-inner">
+            <img src="IMG_7892.JPG" alt="Rohan Bawchikar - Frontend Developer" class="profile-img">
+            <div class="photo-overlay"></div>
+          </div>
+          <div class="photo-border-glow"></div>
+        </div>
+
+        <div class="photo-status">
+          <span class="status-dot"></span>
+          <span class="status-text">Available for Work</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2 class="heading">About Me</h2>
+    <p>
+      Hi! I'm <strong>Rohan Bawchikar</strong>, a Computer Engineering student
+      with a strong interest in Frontend Web Development. I enjoy bringing
+      creative ideas to life through clean code, modern design, and intuitive user interfaces.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <h2 class="heading">Projects</h2>
+    <div class="project-list">
+      <div class="project">
+        <h3>Automated Resume Screening System</h3>
+        <p>
+          Developed an AI-powered resume screening web app interface using React.js,
+          HTML5, and CSS3. Focused on intuitive design, clean layout, and seamless user experience.
+        </p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+
+      <div class="project">
+        <h3>Compass Food</h3>
+        <p>
+          Designed and developed a responsive food website using HTML, CSS, and JavaScript.
+          Focused on user interaction, accessibility, and performance optimization.
+        </p>
+        <a href="https://compassfood.netlify.app/" target="_blank" rel="noopener" class="btn">Live Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <h2 class="heading">Services</h2>
+    <div class="services-list">
+      <div class="service" data-animate>
+        <i class="fa-solid fa-code"></i>
+        <h3>Frontend Development</h3>
+        <p>Modern, responsive UIs with clean code and best practices.</p>
+      </div>
+      <div class="service" data-animate>
+        <i class="fa-solid fa-mobile-screen"></i>
+        <h3>Responsive Design</h3>
+        <p>Mobile-first layouts optimized for performance and accessibility.</p>
+      </div>
+      <div class="service" data-animate>
+        <i class="fa-solid fa-rocket"></i>
+        <h3>UI Enhancements</h3>
+        <p>Micro-interactions, animations, and delightful user experiences.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="experience" id="experience">
+    <h2 class="heading">My Journey</h2>
+    <p class="experience-subtitle">Transforming from beginner to professional frontend developer</p>
+
+    <!-- Animated background elements -->
+    <div class="experience-bg" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <div class="experience-grid" data-animate>
+      <!-- Step 1: HTML/CSS -->
+      <div class="exp-card" data-step="1" data-color="purple">
+        <div class="card-glow"></div>
+        <div class="card-inner">
+          <div class="card-icon-wrapper">
+            <svg class="card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <div class="progress-ring">
+              <svg class="progress-svg" width="120" height="120">
+                <circle class="progress-bg" cx="60" cy="60" r="54"></circle>
+                <circle class="progress-bar" cx="60" cy="60" r="54" data-progress="100"></circle>
+              </svg>
+            </div>
+          </div>
+
+          <div class="card-content">
+            <div class="card-header-new">
+              <span class="step-badge">Step 1</span>
+              <h3>HTML/CSS Fundamentals</h3>
+            </div>
+            <p class="card-description">Building solid foundation with semantic HTML and modern CSS</p>
+
+            <div class="tech-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">Flexbox</span>
+              <span class="tag">Grid</span>
+            </div>
+
+            <button class="expand-btn" data-target="exp-details-1" aria-expanded="false">
+              <span class="expand-text">View Details</span>
+              <svg class="expand-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+
+            <div class="exp-details" id="exp-details-1">
+              <ul class="details-list">
+                <li>Master HTML5 semantic elements and structure</li>
+                <li>CSS Grid and Flexbox for responsive layouts</li>
+                <li>Accessibility best practices (ARIA, WCAG)</li>
+                <li>CSS custom properties and modern styling</li>
+                <li>Cross-browser compatibility</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: JavaScript -->
+      <div class="exp-card" data-step="2" data-color="blue">
+        <div class="card-glow"></div>
+        <div class="card-inner">
+          <div class="card-icon-wrapper">
+            <svg class="card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <div class="progress-ring">
+              <svg class="progress-svg" width="120" height="120">
+                <circle class="progress-bg" cx="60" cy="60" r="54"></circle>
+                <circle class="progress-bar" cx="60" cy="60" r="54" data-progress="95"></circle>
+              </svg>
+            </div>
+          </div>
+
+          <div class="card-content">
+            <div class="card-header-new">
+              <span class="step-badge">Step 2</span>
+              <h3>JavaScript ES6+ & DOM</h3>
+            </div>
+            <p class="card-description">Mastering modern JavaScript and dynamic interactions</p>
+
+            <div class="tech-tags">
+              <span class="tag">ES6+</span>
+              <span class="tag">DOM</span>
+              <span class="tag">Async/Await</span>
+              <span class="tag">APIs</span>
+            </div>
+
+            <button class="expand-btn" data-target="exp-details-2" aria-expanded="false">
+              <span class="expand-text">View Details</span>
+              <svg class="expand-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+
+            <div class="exp-details" id="exp-details-2">
+              <ul class="details-list">
+                <li>ES6+ features: arrow functions, destructuring, modules</li>
+                <li>DOM manipulation and event handling</li>
+                <li>Asynchronous JavaScript (Promises, async/await)</li>
+                <li>Building interactive UI components</li>
+                <li>JavaScript best practices and organization</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: React -->
+      <div class="exp-card" data-step="3" data-color="cyan">
+        <div class="card-glow"></div>
+        <div class="card-inner">
+          <div class="card-icon-wrapper">
+            <svg class="card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="12" cy="12" rx="10" ry="4" stroke="currentColor" stroke-width="2" />
+              <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)" stroke="currentColor"
+                stroke-width="2" />
+              <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)" stroke="currentColor"
+                stroke-width="2" />
+              <circle cx="12" cy="12" r="2" fill="currentColor" />
+            </svg>
+            <div class="progress-ring">
+              <svg class="progress-svg" width="120" height="120">
+                <circle class="progress-bg" cx="60" cy="60" r="54"></circle>
+                <circle class="progress-bar" cx="60" cy="60" r="54" data-progress="85"></circle>
+              </svg>
+            </div>
+          </div>
+
+          <div class="card-content">
+            <div class="card-header-new">
+              <span class="step-badge">Step 3</span>
+              <h3>React Basics</h3>
+            </div>
+            <p class="card-description">Building modern, scalable applications with React</p>
+
+            <div class="tech-tags">
+              <span class="tag">React</span>
+              <span class="tag">Hooks</span>
+              <span class="tag">Components</span>
+              <span class="tag">State</span>
+            </div>
+
+            <button class="expand-btn" data-target="exp-details-3" aria-expanded="false">
+              <span class="expand-text">View Details</span>
+              <svg class="expand-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+
+            <div class="exp-details" id="exp-details-3">
+              <ul class="details-list">
+                <li>React components, props, and state management</li>
+                <li>Hooks: useState, useEffect, useContext</li>
+                <li>Building reusable component libraries</li>
+                <li>React Router for navigation</li>
+                <li>Component composition and patterns</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4: Performance -->
+      <div class="exp-card" data-step="4" data-color="emerald">
+        <div class="card-glow"></div>
+        <div class="card-inner">
+          <div class="card-icon-wrapper">
+            <svg class="card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M12 8V2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <div class="progress-ring">
+              <svg class="progress-svg" width="120" height="120">
+                <circle class="progress-bg" cx="60" cy="60" r="54"></circle>
+                <circle class="progress-bar" cx="60" cy="60" r="54" data-progress="80"></circle>
+              </svg>
+            </div>
+          </div>
+
+          <div class="card-content">
+            <div class="card-header-new">
+              <span class="step-badge">Step 4</span>
+              <h3>Performance & Animations</h3>
+            </div>
+            <p class="card-description">Optimizing for speed and delightful user experience</p>
+
+            <div class="tech-tags">
+              <span class="tag">Optimization</span>
+              <span class="tag">Animations</span>
+              <span class="tag">Web Vitals</span>
+            </div>
+
+            <button class="expand-btn" data-target="exp-details-4" aria-expanded="false">
+              <span class="expand-text">View Details</span>
+              <svg class="expand-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+
+            <div class="exp-details" id="exp-details-4">
+              <ul class="details-list">
+                <li>Code splitting and lazy loading</li>
+                <li>Optimizing bundle size and load times</li>
+                <li>CSS animations and transitions</li>
+                <li>JavaScript animation libraries</li>
+                <li>Performance monitoring tools</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 5: Production -->
+      <div class="exp-card" data-step="5" data-color="orange">
+        <div class="card-glow"></div>
+        <div class="card-inner">
+          <div class="card-icon-wrapper">
+            <svg class="card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+            </svg>
+            <div class="progress-ring">
+              <svg class="progress-svg" width="120" height="120">
+                <circle class="progress-bg" cx="60" cy="60" r="54"></circle>
+                <circle class="progress-bar" cx="60" cy="60" r="54" data-progress="90"></circle>
+              </svg>
+            </div>
+          </div>
+
+          <div class="card-content">
+            <div class="card-header-new">
+              <span class="step-badge">Step 5</span>
+              <h3>Production Ready</h3>
+            </div>
+            <p class="card-description">Delivering professional, enterprise-grade solutions</p>
+
+            <div class="tech-tags">
+              <span class="tag">CI/CD</span>
+              <span class="tag">Testing</span>
+              <span class="tag">Deployment</span>
+            </div>
+
+            <button class="expand-btn" data-target="exp-details-5" aria-expanded="false">
+              <span class="expand-text">View Details</span>
+              <svg class="expand-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+
+            <div class="exp-details" id="exp-details-5">
+              <ul class="details-list">
+                <li>Client communication and project management</li>
+                <li>Deployment strategies and CI/CD pipelines</li>
+                <li>Testing and quality assurance</li>
+                <li>Version control and workflows</li>
+                <li>Production-ready applications</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call To Action -->
+  <section class="cta" id="cta">
+    <div class="cta-inner" data-animate>
+      <h2>Have a project in mind?</h2>
+      <p>Let’s build something great together.</p>
+      <a href="#contact" class="btn">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="brand">
+        <span class="logo-mark">RB</span><span class="logo-text">Portfolio</span>
+      </div>
+      <div class="copy">© <span id="year"></span> Rohan Bawchikar. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <button id="backToTop" aria-label="Back to top" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <h2 class="heading">Skills</h2>
+    <p class="skills-subtitle">Technologies I work with to bring ideas to life</p>
+    <!-- Animated background -->
+    <div class="skills-bg" aria-hidden="true">
+      <div class="skills-orb skills-orb-1"></div>
+      <div class="skills-orb skills-orb-2"></div>
+      <div class="skills-orb skills-orb-3"></div>
+    </div>
+    <div class="skills-container" data-animate>
+      <!-- Frontend Skills -->
+      <div class="skill-category">
+        <div class="category-header">
+          <div class="category-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3 class="category-title">Frontend Development</h3>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card" data-skill-level="95">
+            <div class="skill-card-inner">
+              <div class="skill-icon-wrapper">
+                <div class="skill-hexagon">
+                  <svg class="skill-icon" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" />
+                  </svg>
+                </div>
+                <div class="skill-particles"></div>
+              </div>
+              <h4 class="skill-name">HTML5 & CSS3</h4>
+              <div class="skill-progress">
+                <div class="skill-progress-bar" data-progress="95"></div>
+                <span class="skill-percentage">95%</span>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Semantic HTML</span>
+                <span class="skill-tag">Flexbox</span>
+                <span class="skill-tag">Grid</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-card" data-skill-level="90">
+            <div class="skill-card-inner">
+              <div class="skill-icon-wrapper">
+                <div class="skill-hexagon">
+                  <svg class="skill-icon" viewBox="0 0 24 24" fill="none">
+                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" />
+                  </svg>
+                </div>
+                <div class="skill-particles"></div>
+              </div>
+              <h4 class="skill-name">JavaScript (ES6+)</h4>
+              <div class="skill-progress">
+                <div class="skill-progress-bar" data-progress="90"></div>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Async/Await</span>
+                <span class="skill-tag">DOM</span>
+                <span class="skill-tag">APIs</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-card" data-skill-level="85">
+            <div class="skill-card-inner">
+              <div class="skill-icon-wrapper">
+                <div class="skill-hexagon">
+                  <svg class="skill-icon" viewBox="0 0 24 24" fill="none">
+                    <ellipse cx="12" cy="12" rx="10" ry="4" stroke="currentColor" stroke-width="2" />
+                    <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)" stroke="currentColor"
+                      stroke-width="2" />
+                    <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)" stroke="currentColor"
+                      stroke-width="2" />
+                    <circle cx="12" cy="12" r="2" fill="currentColor" />
+                  </svg>
+                </div>
+                <div class="skill-particles"></div>
+              </div>
+              <h4 class="skill-name">React.js</h4>
+              <div class="skill-progress">
+                <div class="skill-progress-bar" data-progress="85"></div>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Hooks</span>
+                <span class="skill-tag">Components</span>
+                <span class="skill-tag">State</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Design & Styling -->
+      <div class="skill-category">
+        <div class="category-header">
+          <div class="category-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2" />
+              <path d="M3 9H21" stroke="currentColor" stroke-width="2" />
+              <path d="M9 21V9" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </div>
+          <h3 class="category-title">Design & Styling</h3>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card" data-skill-level="88">
+            <div class="skill-card-inner">
+              <div class="skill-icon-wrapper">
+                <div class="skill-hexagon">
+                  <svg class="skill-icon" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z"
+                      stroke="currentColor" stroke-width="2" />
+                  </svg>
+                </div>
+                <div class="skill-particles"></div>
+              </div>
+              <h4 class="skill-name">Tailwind CSS</h4>
+              <div class="skill-progress">
+                <div class="skill-progress-bar" data-progress="88"></div>
+                <span class="skill-percentage">88%</span>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Utility-First</span>
+                <span class="skill-tag">Custom Config</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-card" data-skill-level="92">
+            <div class="skill-card-inner">
+              <div class="skill-icon-wrapper">
+                <div class="skill-hexagon">
+                  <svg class="skill-icon" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                      stroke="currentColor" stroke-width="2" />
+                    <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="skill-particles"></div>
+              </div>
+              <h4 class="skill-name">Responsive Design</h4>
+              <div class="skill-progress">
+                <div class="skill-progress-bar" data-progress="92"></div>
+                <span class="skill-percentage">92%</span>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Mobile-First</span>
+                <span class="skill-tag">Breakpoints</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Tools & Workflow -->
+      <div class="skill-category">
+        <div class="category-header">
+          <div class="category-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.7 6.3C15.1 5.9 15.1 5.3 14.7 4.9C14.3 4.5 13.7 4.5 13.3 4.9L8.7 9.5C8.3 9.9 8.3 10.5 8.7 10.9L13.3 15.5C13.7 15.9 14.3 15.9 14.7 15.5C15.1 15.1 15.1 14.5 14.7 14.1L10.8 10.2L14.7 6.3Z"
+                fill="currentColor" />
+            </svg>
+          </div>
+          <h3 class="category-title">Tools & Workflow</h3>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card" data-skill-level="87">
+            <div class="skill-card-inner">
+              <div class="skill-icon-wrapper">
+                <div class="skill-hexagon">
+                  <svg class="skill-icon" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M9 19C9 20.1046 9.89543 21 11 21H13C14.1046 21 15 20.1046 15 19V5C15 3.89543 14.1046 3 13 3H11C9.89543 3 9 3.89543 9 5V19Z"
+                      stroke="currentColor" stroke-width="2" />
+                    <circle cx="12" cy="12" r="2" fill="currentColor" />
+                  </svg>
+                </div>
+                <div class="skill-particles"></div>
+              </div>
+              <h4 class="skill-name">Git & GitHub</h4>
+              <div class="skill-progress">
+                <div class="skill-progress-bar" data-progress="87"></div>
+                <span class="skill-percentage">87%</span>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Version Control</span>
+                <span class="skill-tag">Collaboration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="certifications" id="certifications">
+    <h2 class="heading">Certifications</h2>
+    <p class="certifications-subtitle">Professional credentials and achievements</p>
+    <!-- Animated background particles -->
+    <div class="cert-bg" aria-hidden="true">
+      <div class="cert-particle"></div>
+      <div class="cert-particle"></div>
+      <div class="cert-particle"></div>
+      <div class="cert-particle"></div>
+      <div class="cert-particle"></div>
+    </div>
+    <div class="cert-grid" data-animate>
+      <!-- Card 1: Google Frontend -->
+      <div class="cert-card" data-cert-color="blue">
+        <div class="cert-glow"></div>
+        <div class="cert-card-inner">
+          <div class="cert-badge">
+            <svg class="cert-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <div class="cert-shine"></div>
+          </div>
+          <div class="cert-content">
+            <h3 class="cert-title">Frontend Development</h3>
+            <p class="cert-issuer">Google</p>
+            <p class="cert-description">Professional certification in modern frontend development technologies and best
+              practices</p>
+            <div class="cert-tags">
+              <span class="cert-tag">HTML5</span>
+              <span class="cert-tag">CSS3</span>
+              <span class="cert-tag">JavaScript</span>
+            </div>
+            <a href="Fornt End google certificate.pdf" download class="cert-download-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <span>Download</span>
+            </a>
+          </div>
+          <div class="cert-verified">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M9 12L11 14L15 10M21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>Verified</span>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2: Google Python -->
+      <div class="cert-card" data-cert-color="green">
+        <div class="cert-glow"></div>
+        <div class="cert-card-inner">
+          <div class="cert-badge">
+            <svg class="cert-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <div class="cert-shine"></div>
+          </div>
+          <div class="cert-content">
+            <h3 class="cert-title">Python Programming</h3>
+            <p class="cert-issuer">Google</p>
+            <p class="cert-description">Advanced Python programming certification with focus on data structures and
+              automation</p>
+            <div class="cert-tags">
+              <span class="cert-tag">Python</span>
+              <span class="cert-tag">Data Structures</span>
+              <span class="cert-tag">Automation</span>
+            </div>
+            <a href="google python.pdf" download class="cert-download-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <span>Download</span>
+            </a>
+          </div>
+          <div class="cert-verified">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M9 12L11 14L15 10M21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>Verified</span>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3: IEEE Research Paper -->
+      <div class="cert-card" data-cert-color="purple">
+        <div class="cert-glow"></div>
+        <div class="cert-card-inner">
+          <div class="cert-badge">
+            <svg class="cert-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M16 13H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M16 17H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M10 9H9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <div class="cert-shine"></div>
+          </div>
+          <div class="cert-content">
+            <h3 class="cert-title">Research Paper Publication</h3>
+            <p class="cert-issuer">IEEE</p>
+            <p class="cert-description">Final year project research paper published in IEEE conference proceedings</p>
+            <div class="cert-tags">
+              <span class="cert-tag">Research</span>
+              <span class="cert-tag">IEEE</span>
+              <span class="cert-tag">Publication</span>
+            </div>
+            <a href="Paper ID 230_Rohan Bawchikar.pdf" download class="cert-download-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <span>Download</span>
+            </a>
+          </div>
+          <div class="cert-verified">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M9 12L11 14L15 10M21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>Verified</span>
+          </div>
+        </div>
+      </div>
+      <!-- Card 4: Full Stack GeeksforGeeks -->
+      <div class="cert-card" data-cert-color="orange">
+        <div class="cert-glow"></div>
+        <div class="cert-card-inner">
+          <div class="cert-badge">
+            <svg class="cert-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="12" cy="12" rx="10" ry="4" stroke="currentColor" stroke-width="2" />
+              <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)" stroke="currentColor"
+                stroke-width="2" />
+              <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)" stroke="currentColor"
+                stroke-width="2" />
+              <circle cx="12" cy="12" r="2" fill="currentColor" />
+            </svg>
+            <div class="cert-shine"></div>
+          </div>
+          <div class="cert-content">
+            <h3 class="cert-title">Full Stack Development</h3>
+            <p class="cert-issuer">GeeksforGeeks</p>
+            <p class="cert-description">Comprehensive full stack development with React.js and Node.js technologies</p>
+            <div class="cert-tags">
+              <span class="cert-tag">React</span>
+              <span class="cert-tag">Node.js</span>
+              <span class="cert-tag">Full Stack</span>
+            </div>
+            <a href="#" class="cert-download-btn cert-coming-soon" onclick="return false;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <span>View Details</span>
+            </a>
+          </div>
+          <div class="cert-verified">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M9 12L11 14L15 10M21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>Verified</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2 class="heading">Contact</h2>
+    <p>Email: <a href="mailto:ro.bawchikar07@gmail.com">ro.bawchikar07@gmail.com</a></p>
+    <p>Phone: 7300381445</p>
+    <p>Location: Pune, Maharashtra</p>
+  </section>
+
+  <!-- Enhanced Interactive Scripts -->
+  <script>
+    // Theme init: localStorage -> system -> default 'dark'
+    (function () {
+      const root = document.documentElement;
+      const stored = localStorage.getItem('theme');
+      const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+      const initial = stored || (prefersLight ? 'light' : 'dark');
+      if (initial === 'light') root.setAttribute('data-theme', 'light');
+      const label = document.getElementById('theme-label');
+      if (label) label.textContent = initial === 'light' ? 'Light mode' : 'Dark mode';
+    })();
+
+    // Smooth scroll for navigation
+    document.querySelectorAll('.navbar a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        if (this.hash !== "") {
+          e.preventDefault();
+          const target = document.querySelector(this.hash);
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Theme toggle
+    const toggleBtn = document.getElementById('theme-toggle');
+    const themeLabel = document.getElementById('theme-label');
+    toggleBtn.addEventListener('click', () => {
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      if (isLight) {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      }
+      if (themeLabel) {
+        const nowLight = document.documentElement.getAttribute('data-theme') === 'light';
+        themeLabel.textContent = nowLight ? 'Light mode' : 'Dark mode';
+      }
+    });
+
+    // Parallax (reduced-motion aware)
+    (function () {
+      const back = document.querySelector('.parallax .layer-back');
+      const front = document.querySelector('.parallax .layer-front');
+      if (!back || !front) return;
+
+      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) return;
+
+      let ticking = false;
+      const onScroll = () => {
+        if (ticking) return;
+        window.requestAnimationFrame(() => {
+          const y = window.scrollY || window.pageYOffset;
+          back.style.transform = 'translateY(' + (y * 0.15) + 'px)';
+          front.style.transform = 'translateY(' + (y * 0.30) + 'px)';
+          ticking = false;
+        });
+        ticking = true;
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+
+    // Scroll reveal animations
+    (function () {
+      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) return;
+      const items = document.querySelectorAll('[data-animate]');
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      items.forEach(el => io.observe(el));
+    })();
+
+    // Active nav link on scroll + back to top
+    (function () {
+      const sections = ['home', 'about', 'projects', 'services', 'experience', 'skills', 'certifications', 'contact'];
+      const navLinks = Array.from(document.querySelectorAll('.navbar ul li a'));
+      const backToTop = document.getElementById('backToTop');
+      const setActive = () => {
+        const y = window.scrollY + 120;
+        let current = 'home';
+        sections.forEach(id => {
+          const el = document.getElementById(id);
+          if (el && el.offsetTop <= y) current = id;
+        });
+        navLinks.forEach(a => {
+          const li = a.parentElement;
+          if (a.getAttribute('href') === '#' + current) li.classList.add('active'); else li.classList.remove('active');
+        });
+        if (window.scrollY > 400) backToTop.classList.add('show'); else backToTop.classList.remove('show');
+      };
+      window.addEventListener('scroll', setActive, { passive: true });
+      setActive();
+      document.getElementById('year').textContent = new Date().getFullYear();
+      backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    })();
+
+    // New Experience Section - Expand/Collapse functionality
+    document.addEventListener('DOMContentLoaded', function () {
+      const expandButtons = document.querySelectorAll('.expand-btn');
+      console.log('Found expand buttons:', expandButtons.length);
+
+      expandButtons.forEach(button => {
+        button.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('data-target');
+          const details = document.getElementById(targetId);
+          const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+          console.log('Button clicked, target:', targetId, 'expanded:', isExpanded);
+
+          if (isExpanded) {
+            // Collapse
+            details.classList.remove('expanded');
+            this.setAttribute('aria-expanded', 'false');
+            this.querySelector('.expand-text').textContent = 'View Details';
+          } else {
+            // Expand
+            details.classList.add('expanded');
+            this.setAttribute('aria-expanded', 'true');
+            this.querySelector('.expand-text').textContent = 'Hide Details';
+          }
+        });
+      });
+
+      // Animate progress bars when cards are revealed
+      const experienceGrid = document.querySelector('.experience-grid');
+      if (experienceGrid) {
+        const progressObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              // Set CSS custom properties for progress animation
+              const progressBars = entry.target.querySelectorAll('.progress-bar');
+              progressBars.forEach(bar => {
+                const progress = bar.getAttribute('data-progress');
+                bar.style.setProperty('--progress', progress);
+              });
+              progressObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.2 });
+
+        progressObserver.observe(experienceGrid);
+      }
+    });
+
+    // ===================================
+    // ADVANCED INTERACTIVE ANIMATIONS
+    // ===================================
+
+    // Typing Animation
+    (function () {
+      const typingText = document.getElementById('typingText');
+      if (!typingText) return;
+
+      const texts = [
+        'Frontend Developer',
+        'UI/UX Enthusiast',
+        'React Developer',
+        'Creative Designer'
+      ];
+      let textIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      let typingSpeed = 100;
+
+      function type() {
+        const currentText = texts[textIndex];
+
+        if (isDeleting) {
+          typingText.textContent = currentText.substring(0, charIndex - 1);
+          charIndex--;
+          typingSpeed = 50;
+        } else {
+          typingText.textContent = currentText.substring(0, charIndex + 1);
+          charIndex++;
+          typingSpeed = 100;
+        }
+
+        if (!isDeleting && charIndex === currentText.length) {
+          typingSpeed = 2000; // Pause at end
+          isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          textIndex = (textIndex + 1) % texts.length;
+          typingSpeed = 500; // Pause before next text
+        }
+
+        setTimeout(type, typingSpeed);
+      }
+
+      type();
+    })();
+
+    // Custom Cursor
+    (function () {
+      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) return;
+
+      const cursorDot = document.getElementById('cursorDot');
+      const cursorOutline = document.getElementById('cursorOutline');
+      if (!cursorDot || !cursorOutline) return;
+
+      // Check if it's a touch device
+      const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+      if (isTouchDevice) return;
+
+      document.body.classList.add('cursor-active');
+
+      let mouseX = 0, mouseY = 0;
+      let outlineX = 0, outlineY = 0;
+
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        cursorDot.style.left = mouseX + 'px';
+        cursorDot.style.top = mouseY + 'px';
+      });
+
+      // Smooth follow for outline
+      function animateOutline() {
+        outlineX += (mouseX - outlineX) * 0.15;
+        outlineY += (mouseY - outlineY) * 0.15;
+        cursorOutline.style.left = outlineX + 'px';
+        cursorOutline.style.top = outlineY + 'px';
+        requestAnimationFrame(animateOutline);
+      }
+      animateOutline();
+
+      // Add hover class for interactive elements
+      const interactiveElements = document.querySelectorAll('a, button, .btn, .project, .service');
+      interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+      });
+    })();
+
+    // Floating Particles
+    (function () {
+      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) return;
+
+      const particlesContainer = document.getElementById('particles');
+      if (!particlesContainer) return;
+
+      const particleCount = 30;
+
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+
+        const size = Math.random() * 6 + 2;
+        particle.style.width = size + 'px';
+        particle.style.height = size + 'px';
+
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.setProperty('--float-x', (Math.random() * 200 - 100) + 'px');
+
+        const duration = Math.random() * 10 + 15;
+        particle.style.animationDuration = duration + 's';
+        particle.style.animationDelay = Math.random() * 5 + 's';
+
+        particlesContainer.appendChild(particle);
+      }
+    })();
+
+    // Scroll Progress Indicator
+    (function () {
+      const scrollProgress = document.getElementById('scrollProgress');
+      if (!scrollProgress) return;
+
+      let ticking = false;
+      function updateScrollProgress() {
+        if (ticking) return;
+
+        window.requestAnimationFrame(() => {
+          const scrollTop = window.scrollY || document.documentElement.scrollTop;
+          const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          const scrollPercent = (scrollTop / docHeight) * 100;
+          scrollProgress.style.width = scrollPercent + '%';
+          ticking = false;
+        });
+
+        ticking = true;
+      }
+
+      window.addEventListener('scroll', updateScrollProgress, { passive: true });
+      updateScrollProgress();
+    })();
+
+    // Enhanced Navbar Auto-hide on Scroll
+    (function () {
+      const navbar = document.querySelector('.navbar');
+      if (!navbar) return;
+
+      let lastScrollTop = 0;
+      let ticking = false;
+
+      function updateNavbar() {
+        if (ticking) return;
+
+        window.requestAnimationFrame(() => {
+          const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+          if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Scrolling down - hide navbar
+            navbar.style.transform = 'translateY(-100%)';
+          } else {
+            // Scrolling up - show navbar
+            navbar.style.transform = 'translateY(0)';
+          }
+
+          lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+          ticking = false;
+        });
+
+        ticking = true;
+      }
+
+      window.addEventListener('scroll', updateNavbar, { passive: true });
+
+      // Add transition to navbar
+      navbar.style.transition = 'transform 0.3s ease';
+    })();
+
+    // Magnetic Button Effect
+    (function () {
+      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) return;
+
+      const buttons = document.querySelectorAll('.btn');
+
+      buttons.forEach(button => {
+        button.addEventListener('mousemove', (e) => {
+          const rect = button.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+
+          button.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+        });
+
+        button.addEventListener('mouseleave', () => {
+          button.style.transform = 'translate(0, 0)';
+        });
+      });
+    })();
+
+    // Social Icons Animation
+    (function () {
+      const sciIcons = document.querySelectorAll('.sci a');
+
+      sciIcons.forEach((icon, index) => {
+        icon.style.animationDelay = (index * 0.1) + 's';
+      });
+    })();
+
+    // ========================================
+    // PARALLAX SCROLL EFFECTS
+    // ========================================
+    (function () {
+      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) return;
+
+      const layerBack = document.querySelector('.layer-back');
+      const layerFront = document.querySelector('.layer-front');
+
+      if (!layerBack || !layerFront) return;
+
+      let ticking = false;
+
+      function updateParallax() {
+        if (ticking) return;
+
+        window.requestAnimationFrame(() => {
+          const scrolled = window.scrollY;
+
+          // Different speeds for depth effect
+          layerBack.style.transform = `translateY(${scrolled * 0.5}px)`;
+          layerFront.style.transform = `translateY(${scrolled * 0.3}px)`;
+
+          ticking = false;
+        });
+
+        ticking = true;
+      }
+
+      window.addEventListener('scroll', updateParallax, { passive: true });
+      updateParallax();
+    })();
+
+    // ========================================
+    // ENHANCED SCROLL REVEAL ANIMATIONS
+    // ========================================
+    (function () {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -100px 0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            // Don't unobserve so animation stays
+          }
+        });
+      }, observerOptions);
+
+      // Observe all animated elements
+      const animatedElements = document.querySelectorAll('[data-animate]');
+      animatedElements.forEach(el => observer.observe(el));
+
+      // Observe skill cards individually for stagger
+      const skillCards = document.querySelectorAll('.skill-card');
+      skillCards.forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.1}s`;
+        observer.observe(card);
+      });
+
+      // Observe certification cards
+      const certCards = document.querySelectorAll('.cert-card');
+      certCards.forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.15}s`;
+        observer.observe(card);
+      });
+    })();
+
+    // ========================================
+    // MOBILE HAMBURGER MENU
+    // ========================================
+    (function () {
+      const menuToggle = document.getElementById('menuToggle');
+      const navMenu = document.getElementById('navMenu');
+
+      if (!menuToggle || !navMenu) return;
+
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      // Close menu when clicking a link
+      const navLinks = navMenu.querySelectorAll('a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          menuToggle.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+          menuToggle.classList.remove('active');
+          navMenu.classList.remove('active');
+        }
+      });
+    })();
+  </script>
+</body>
+
+</html>
