@@ -1,0 +1,38 @@
+/* Theme Tokens */
+:root {
+    --bg1: #0f172a;
+    --bg2: #1e293b;
+    --bg3: #0b1020;
+    --bg4: #111827;
+    --text: #e5e7eb;
+    --muted: #cbd5e1;
+    --heading: #ffffff;
+    --accent: #22c55e;
+    --accent-soft: #86efac;
+    --card-bg: rgba(255, 255, 255, 0.06);
+    --card-border: rgba(255, 255, 255, 0.14);
+    --nav-bg: rgba(255, 255, 255, 0.05);
+    --nav-border: rgba(255, 255, 255, 0.08);
+    --button-start: #34d399;
+    --button-end: #22c55e;
+    --button-shadow: rgba(34, 197, 94, 0.25);
+}
+
+[data-theme="light"] {
+    --bg1: #eaf1ff;
+    --bg2: #e8f5ee;
+    --bg3: #e9eef7;
+    --bg4: #edf2f7;
+    --text: #0f172a;
+    --muted: #475569;
+    --heading: #0b1020;
+    --accent: #16a34a;
+    --accent-soft: #4ade80;
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --card-border: rgba(15, 23, 42, 0.08);
+    --nav-bg: rgba(255, 255, 255, 0.7);
+    --nav-border: rgba(15, 23, 42, 0.08);
+    --button-start: #22c55e;
+    --button-end: #16a34a;
+    --button-shadow: rgba(22, 163, 74, 0.25);
+}

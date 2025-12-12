@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rohan Bawchikar</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- External CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -90,7 +90,7 @@
       </p>
 
       <div class="btn-sci">
-        <a href="Rohan's Resume-hackerresume.pdf" download class="btn">Download CV</a>
+        <a href="assets/documents/Rohan's Resume-hackerresume.pdf" download class="btn">Download CV</a>
         <div class="sci">
           <a href="https://www.linkedin.com/in/rohan-bhushan-bawchikar-25725724a/" target="_blank" rel="noopener"
             title="LinkedIn">
@@ -129,7 +129,7 @@
 
         <div class="photo-frame">
           <div class="photo-inner">
-            <img src="IMG_7892.JPG" alt="Rohan Bawchikar - Frontend Developer" class="profile-img">
+            <img src="assets/images/IMG_7892.JPG" alt="Rohan Bawchikar - Frontend Developer" class="profile-img">
             <div class="photo-overlay"></div>
           </div>
           <div class="photo-border-glow"></div>
@@ -752,7 +752,7 @@
               <span class="cert-tag">CSS3</span>
               <span class="cert-tag">JavaScript</span>
             </div>
-            <a href="Fornt End google certificate.pdf" download class="cert-download-btn">
+            <a href="assets/documents/Fornt End google certificate.pdf" download class="cert-download-btn">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <path
                   d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15"
@@ -796,7 +796,7 @@
               <span class="cert-tag">Data Structures</span>
               <span class="cert-tag">Automation</span>
             </div>
-            <a href="google python.pdf" download class="cert-download-btn">
+            <a href="assets/documents/google python.pdf" download class="cert-download-btn">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <path
                   d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15"
@@ -848,7 +848,7 @@
               <span class="cert-tag">IEEE</span>
               <span class="cert-tag">Publication</span>
             </div>
-            <a href="Paper ID 230_Rohan Bawchikar.pdf" download class="cert-download-btn">
+            <a href="assets/documents/Paper ID 230_Rohan Bawchikar.pdf" download class="cert-download-btn">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <path
                   d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15"
@@ -928,475 +928,13 @@
     <p>Location: Pune, Maharashtra</p>
   </section>
 
-  <!-- Enhanced Interactive Scripts -->
-  <script>
-    // Theme init: localStorage -> system -> default 'dark'
-    (function () {
-      const root = document.documentElement;
-      const stored = localStorage.getItem('theme');
-      const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-      const initial = stored || (prefersLight ? 'light' : 'dark');
-      if (initial === 'light') root.setAttribute('data-theme', 'light');
-      const label = document.getElementById('theme-label');
-      if (label) label.textContent = initial === 'light' ? 'Light mode' : 'Dark mode';
-    })();
-
-    // Smooth scroll for navigation
-    document.querySelectorAll('.navbar a').forEach(link => {
-      link.addEventListener('click', function (e) {
-        if (this.hash !== "") {
-          e.preventDefault();
-          const target = document.querySelector(this.hash);
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
-
-    // Theme toggle
-    const toggleBtn = document.getElementById('theme-toggle');
-    const themeLabel = document.getElementById('theme-label');
-    toggleBtn.addEventListener('click', () => {
-      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-      if (isLight) {
-        document.documentElement.removeAttribute('data-theme');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-      }
-      if (themeLabel) {
-        const nowLight = document.documentElement.getAttribute('data-theme') === 'light';
-        themeLabel.textContent = nowLight ? 'Light mode' : 'Dark mode';
-      }
-    });
-
-    // Parallax (reduced-motion aware)
-    (function () {
-      const back = document.querySelector('.parallax .layer-back');
-      const front = document.querySelector('.parallax .layer-front');
-      if (!back || !front) return;
-
-      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (prefersReduced) return;
-
-      let ticking = false;
-      const onScroll = () => {
-        if (ticking) return;
-        window.requestAnimationFrame(() => {
-          const y = window.scrollY || window.pageYOffset;
-          back.style.transform = 'translateY(' + (y * 0.15) + 'px)';
-          front.style.transform = 'translateY(' + (y * 0.30) + 'px)';
-          ticking = false;
-        });
-        ticking = true;
-      };
-      window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll();
-    })();
-
-    // Scroll reveal animations
-    (function () {
-      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (prefersReduced) return;
-      const items = document.querySelectorAll('[data-animate]');
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            io.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.15 });
-      items.forEach(el => io.observe(el));
-    })();
-
-    // Active nav link on scroll + back to top
-    (function () {
-      const sections = ['home', 'about', 'projects', 'services', 'experience', 'skills', 'certifications', 'contact'];
-      const navLinks = Array.from(document.querySelectorAll('.navbar ul li a'));
-      const backToTop = document.getElementById('backToTop');
-      const setActive = () => {
-        const y = window.scrollY + 120;
-        let current = 'home';
-        sections.forEach(id => {
-          const el = document.getElementById(id);
-          if (el && el.offsetTop <= y) current = id;
-        });
-        navLinks.forEach(a => {
-          const li = a.parentElement;
-          if (a.getAttribute('href') === '#' + current) li.classList.add('active'); else li.classList.remove('active');
-        });
-        if (window.scrollY > 400) backToTop.classList.add('show'); else backToTop.classList.remove('show');
-      };
-      window.addEventListener('scroll', setActive, { passive: true });
-      setActive();
-      document.getElementById('year').textContent = new Date().getFullYear();
-      backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-    })();
-
-    // New Experience Section - Expand/Collapse functionality
-    document.addEventListener('DOMContentLoaded', function () {
-      const expandButtons = document.querySelectorAll('.expand-btn');
-      console.log('Found expand buttons:', expandButtons.length);
-
-      expandButtons.forEach(button => {
-        button.addEventListener('click', function (e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('data-target');
-          const details = document.getElementById(targetId);
-          const isExpanded = this.getAttribute('aria-expanded') === 'true';
-
-          console.log('Button clicked, target:', targetId, 'expanded:', isExpanded);
-
-          if (isExpanded) {
-            // Collapse
-            details.classList.remove('expanded');
-            this.setAttribute('aria-expanded', 'false');
-            this.querySelector('.expand-text').textContent = 'View Details';
-          } else {
-            // Expand
-            details.classList.add('expanded');
-            this.setAttribute('aria-expanded', 'true');
-            this.querySelector('.expand-text').textContent = 'Hide Details';
-          }
-        });
-      });
-
-      // Animate progress bars when cards are revealed
-      const experienceGrid = document.querySelector('.experience-grid');
-      if (experienceGrid) {
-        const progressObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              // Set CSS custom properties for progress animation
-              const progressBars = entry.target.querySelectorAll('.progress-bar');
-              progressBars.forEach(bar => {
-                const progress = bar.getAttribute('data-progress');
-                bar.style.setProperty('--progress', progress);
-              });
-              progressObserver.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.2 });
-
-        progressObserver.observe(experienceGrid);
-      }
-    });
-
-    // ===================================
-    // ADVANCED INTERACTIVE ANIMATIONS
-    // ===================================
-
-    // Typing Animation
-    (function () {
-      const typingText = document.getElementById('typingText');
-      if (!typingText) return;
-
-      const texts = [
-        'Frontend Developer',
-        'UI/UX Enthusiast',
-        'React Developer',
-        'Creative Designer'
-      ];
-      let textIndex = 0;
-      let charIndex = 0;
-      let isDeleting = false;
-      let typingSpeed = 100;
-
-      function type() {
-        const currentText = texts[textIndex];
-
-        if (isDeleting) {
-          typingText.textContent = currentText.substring(0, charIndex - 1);
-          charIndex--;
-          typingSpeed = 50;
-        } else {
-          typingText.textContent = currentText.substring(0, charIndex + 1);
-          charIndex++;
-          typingSpeed = 100;
-        }
-
-        if (!isDeleting && charIndex === currentText.length) {
-          typingSpeed = 2000; // Pause at end
-          isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-          isDeleting = false;
-          textIndex = (textIndex + 1) % texts.length;
-          typingSpeed = 500; // Pause before next text
-        }
-
-        setTimeout(type, typingSpeed);
-      }
-
-      type();
-    })();
-
-    // Custom Cursor
-    (function () {
-      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (prefersReduced) return;
-
-      const cursorDot = document.getElementById('cursorDot');
-      const cursorOutline = document.getElementById('cursorOutline');
-      if (!cursorDot || !cursorOutline) return;
-
-      // Check if it's a touch device
-      const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-      if (isTouchDevice) return;
-
-      document.body.classList.add('cursor-active');
-
-      let mouseX = 0, mouseY = 0;
-      let outlineX = 0, outlineY = 0;
-
-      document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        cursorDot.style.left = mouseX + 'px';
-        cursorDot.style.top = mouseY + 'px';
-      });
-
-      // Smooth follow for outline
-      function animateOutline() {
-        outlineX += (mouseX - outlineX) * 0.15;
-        outlineY += (mouseY - outlineY) * 0.15;
-        cursorOutline.style.left = outlineX + 'px';
-        cursorOutline.style.top = outlineY + 'px';
-        requestAnimationFrame(animateOutline);
-      }
-      animateOutline();
-
-      // Add hover class for interactive elements
-      const interactiveElements = document.querySelectorAll('a, button, .btn, .project, .service');
-      interactiveElements.forEach(el => {
-        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-      });
-    })();
-
-    // Floating Particles
-    (function () {
-      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (prefersReduced) return;
-
-      const particlesContainer = document.getElementById('particles');
-      if (!particlesContainer) return;
-
-      const particleCount = 30;
-
-      for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-
-        const size = Math.random() * 6 + 2;
-        particle.style.width = size + 'px';
-        particle.style.height = size + 'px';
-
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.setProperty('--float-x', (Math.random() * 200 - 100) + 'px');
-
-        const duration = Math.random() * 10 + 15;
-        particle.style.animationDuration = duration + 's';
-        particle.style.animationDelay = Math.random() * 5 + 's';
-
-        particlesContainer.appendChild(particle);
-      }
-    })();
-
-    // Scroll Progress Indicator
-    (function () {
-      const scrollProgress = document.getElementById('scrollProgress');
-      if (!scrollProgress) return;
-
-      let ticking = false;
-      function updateScrollProgress() {
-        if (ticking) return;
-
-        window.requestAnimationFrame(() => {
-          const scrollTop = window.scrollY || document.documentElement.scrollTop;
-          const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-          const scrollPercent = (scrollTop / docHeight) * 100;
-          scrollProgress.style.width = scrollPercent + '%';
-          ticking = false;
-        });
-
-        ticking = true;
-      }
-
-      window.addEventListener('scroll', updateScrollProgress, { passive: true });
-      updateScrollProgress();
-    })();
-
-    // Enhanced Navbar Auto-hide on Scroll
-    (function () {
-      const navbar = document.querySelector('.navbar');
-      if (!navbar) return;
-
-      let lastScrollTop = 0;
-      let ticking = false;
-
-      function updateNavbar() {
-        if (ticking) return;
-
-        window.requestAnimationFrame(() => {
-          const scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-          if (scrollTop > lastScrollTop && scrollTop > 100) {
-            // Scrolling down - hide navbar
-            navbar.style.transform = 'translateY(-100%)';
-          } else {
-            // Scrolling up - show navbar
-            navbar.style.transform = 'translateY(0)';
-          }
-
-          lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-          ticking = false;
-        });
-
-        ticking = true;
-      }
-
-      window.addEventListener('scroll', updateNavbar, { passive: true });
-
-      // Add transition to navbar
-      navbar.style.transition = 'transform 0.3s ease';
-    })();
-
-    // Magnetic Button Effect
-    (function () {
-      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (prefersReduced) return;
-
-      const buttons = document.querySelectorAll('.btn');
-
-      buttons.forEach(button => {
-        button.addEventListener('mousemove', (e) => {
-          const rect = button.getBoundingClientRect();
-          const x = e.clientX - rect.left - rect.width / 2;
-          const y = e.clientY - rect.top - rect.height / 2;
-
-          button.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
-        });
-
-        button.addEventListener('mouseleave', () => {
-          button.style.transform = 'translate(0, 0)';
-        });
-      });
-    })();
-
-    // Social Icons Animation
-    (function () {
-      const sciIcons = document.querySelectorAll('.sci a');
-
-      sciIcons.forEach((icon, index) => {
-        icon.style.animationDelay = (index * 0.1) + 's';
-      });
-    })();
-
-    // ========================================
-    // PARALLAX SCROLL EFFECTS
-    // ========================================
-    (function () {
-      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (prefersReduced) return;
-
-      const layerBack = document.querySelector('.layer-back');
-      const layerFront = document.querySelector('.layer-front');
-
-      if (!layerBack || !layerFront) return;
-
-      let ticking = false;
-
-      function updateParallax() {
-        if (ticking) return;
-
-        window.requestAnimationFrame(() => {
-          const scrolled = window.scrollY;
-
-          // Different speeds for depth effect
-          layerBack.style.transform = `translateY(${scrolled * 0.5}px)`;
-          layerFront.style.transform = `translateY(${scrolled * 0.3}px)`;
-
-          ticking = false;
-        });
-
-        ticking = true;
-      }
-
-      window.addEventListener('scroll', updateParallax, { passive: true });
-      updateParallax();
-    })();
-
-    // ========================================
-    // ENHANCED SCROLL REVEAL ANIMATIONS
-    // ========================================
-    (function () {
-      const observerOptions = {
-        root: null,
-        rootMargin: '0px 0px -100px 0px',
-        threshold: 0.1
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            // Don't unobserve so animation stays
-          }
-        });
-      }, observerOptions);
-
-      // Observe all animated elements
-      const animatedElements = document.querySelectorAll('[data-animate]');
-      animatedElements.forEach(el => observer.observe(el));
-
-      // Observe skill cards individually for stagger
-      const skillCards = document.querySelectorAll('.skill-card');
-      skillCards.forEach((card, index) => {
-        card.style.transitionDelay = `${index * 0.1}s`;
-        observer.observe(card);
-      });
-
-      // Observe certification cards
-      const certCards = document.querySelectorAll('.cert-card');
-      certCards.forEach((card, index) => {
-        card.style.transitionDelay = `${index * 0.15}s`;
-        observer.observe(card);
-      });
-    })();
-
-    // ========================================
-    // MOBILE HAMBURGER MENU
-    // ========================================
-    (function () {
-      const menuToggle = document.getElementById('menuToggle');
-      const navMenu = document.getElementById('navMenu');
-
-      if (!menuToggle || !navMenu) return;
-
-      menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-      });
-
-      // Close menu when clicking a link
-      const navLinks = navMenu.querySelectorAll('a');
-      navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          menuToggle.classList.remove('active');
-          navMenu.classList.remove('active');
-        });
-      });
-
-      // Close menu when clicking outside
-      document.addEventListener('click', (e) => {
-        if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-          menuToggle.classList.remove('active');
-          navMenu.classList.remove('active');
-        }
-      });
-    })();
-  </script>
+  <!-- Modular JavaScript -->
+  <script src="js/theme-toggle.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/scroll-effects.js"></script>
+  <script src="js/typing-effect.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

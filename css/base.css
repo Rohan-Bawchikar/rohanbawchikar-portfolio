@@ -1,0 +1,62 @@
+/* CSS Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    /* Calmer, high-contrast background so parallax stands out */
+    background:
+        radial-gradient(1200px 600px at 30% 10%, var(--bg2), var(--bg1) 40%, var(--bg3) 80%),
+        linear-gradient(-45deg, var(--bg1), var(--bg4));
+    background-size: auto;
+    color: var(--text);
+    font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.heading {
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: var(--heading);
+    letter-spacing: 0.4px;
+}
+
+/* Ensure content layers over parallax */
+.home,
+.about,
+.projects,
+.skills,
+.certifications,
+.contact {
+    position: relative;
+    z-index: 1;
+}
+
+/* Common section padding */
+.about,
+.projects,
+.skills,
+.certifications,
+.contact {
+    padding: 100px 9%;
+    text-align: center;
+}
