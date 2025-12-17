@@ -18,6 +18,12 @@
 
   <!-- External CSS -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact-form.css">
+  <link rel="stylesheet" href="css/light-mode-enhancements.css">
+  <link rel="stylesheet" href="css/force-black-text.css">
+  <link rel="stylesheet" href="css/smooth-scroll.css">
+  <link rel="stylesheet" href="css/mobile-fixes.css">
+  <link rel="stylesheet" href="css/remove-contact-text.css">
 
 </head>
 
@@ -491,19 +497,143 @@
     <div class="cta-inner" data-animate>
       <h2>Have a project in mind?</h2>
       <p>Let’s build something great together.</p>
-      <a href="#contact" class="btn">Get in Touch</a>
+      <button id="openContactForm" class="btn">Get in Touch</button>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="brand">
-        <span class="logo-mark">RB</span><span class="logo-text">Portfolio</span>
-      </div>
-      <div class="copy">© <span id="year"></span> Rohan Bawchikar. All rights reserved.</div>
+  <!-- INSANE CONTACT FORM MODAL -->
+  <div class="contact-modal" id="contactModal">
+    <!-- Modal Overlay with Blur -->
+    <div class="modal-overlay"></div>
+
+    <!-- Animated Particles Background -->
+    <div class="modal-particles" aria-hidden="true"></div>
+
+    <!-- Floating Orbs -->
+    <div class="modal-orbs" aria-hidden="true">
+      <div class="modal-orb modal-orb-1"></div>
+      <div class="modal-orb modal-orb-2"></div>
+      <div class="modal-orb modal-orb-3"></div>
     </div>
-  </footer>
+
+    <!-- Modal Container -->
+    <div class="modal-container">
+      <!-- Close Button -->
+      <button class="modal-close" id="closeContactForm" aria-label="Close contact form">
+        <span class="close-line close-line-1"></span>
+        <span class="close-line close-line-2"></span>
+      </button>
+
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <!-- Form Header with Animation -->
+        <div class="form-header">
+          <div class="form-icon-wrapper">
+            <div class="form-icon-glow"></div>
+            <i class="fa-solid fa-envelope form-icon"></i>
+          </div>
+          <h2 class="form-title">
+            <span class="title-word title-word-1">Let's</span>
+            <span class="title-word title-word-2">Talk</span>
+          </h2>
+          <p class="form-subtitle">Send me a message and I'll get back to you soon!</p>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form" id="contactForm">
+          <!-- Name Field -->
+          <div class="form-group">
+            <div class="input-wrapper">
+              <input type="text" id="formName" name="name" required autocomplete="name">
+              <label for="formName" class="floating-label">
+                <i class="fa-solid fa-user label-icon"></i>
+                <span>Your Name</span>
+              </label>
+              <div class="input-glow"></div>
+            </div>
+            <span class="input-error" data-error="name"></span>
+          </div>
+
+          <!-- Email Field -->
+          <div class="form-group">
+            <div class="input-wrapper">
+              <input type="email" id="formEmail" name="email" required autocomplete="email">
+              <label for="formEmail" class="floating-label">
+                <i class="fa-solid fa-envelope label-icon"></i>
+                <span>Your Email</span>
+              </label>
+              <div class="input-glow"></div>
+            </div>
+            <span class="input-error" data-error="email"></span>
+          </div>
+
+          <!-- Subject Field -->
+          <div class="form-group">
+            <div class="input-wrapper">
+              <input type="text" id="formSubject" name="subject" required>
+              <label for="formSubject" class="floating-label">
+                <i class="fa-solid fa-tag label-icon"></i>
+                <span>Subject</span>
+              </label>
+              <div class="input-glow"></div>
+            </div>
+            <span class="input-error" data-error="subject"></span>
+          </div>
+
+          <!-- Message Field -->
+          <div class="form-group">
+            <div class="input-wrapper textarea-wrapper">
+              <textarea id="formMessage" name="message" required rows="5"></textarea>
+              <label for="formMessage" class="floating-label">
+                <i class="fa-solid fa-message label-icon"></i>
+                <span>Your Message</span>
+              </label>
+              <div class="input-glow"></div>
+            </div>
+            <span class="input-error" data-error="message"></span>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="form-actions">
+            <button type="submit" class="form-submit-btn">
+              <span class="btn-content">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span class="btn-text">Send Message</span>
+              </span>
+              <div class="btn-ripple"></div>
+            </button>
+          </div>
+        </form>
+
+        <!-- Success Message -->
+        <div class="form-message form-success" id="formSuccess">
+          <div class="message-icon-wrapper">
+            <div class="success-checkmark">
+              <div class="check-icon">
+                <span class="icon-line line-tip"></span>
+                <span class="icon-line line-long"></span>
+                <div class="icon-circle"></div>
+                <div class="icon-fix"></div>
+              </div>
+            </div>
+          </div>
+          <h3 class="message-title">Message Sent!</h3>
+          <p class="message-text">Thank you for reaching out. I'll get back to you soon!</p>
+          <button class="message-close-btn" onclick="closeSuccessMessage()">Close</button>
+        </div>
+
+        <!-- Error Message -->
+        <div class="form-message form-error" id="formError">
+          <div class="message-icon-wrapper">
+            <i class="fa-solid fa-triangle-exclamation error-icon"></i>
+          </div>
+          <h3 class="message-title">Oops! Something went wrong</h3>
+          <p class="message-text">Please try again or contact me directly via email.</p>
+          <button class="message-close-btn" onclick="closeErrorMessage()">Try Again</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <button id="backToTop" aria-label="Back to top" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
@@ -928,12 +1058,167 @@
     <p>Location: Pune, Maharashtra</p>
   </section>
 
+  <!-- Footer - INSANE KILLER DESIGN -->
+  <footer class="footer">
+    <!-- Animated Wave Background -->
+    <div class="footer-waves" aria-hidden="true">
+      <svg class="wave wave-1" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z">
+        </path>
+      </svg>
+      <svg class="wave wave-2" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z">
+        </path>
+      </svg>
+      <svg class="wave wave-3" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z">
+        </path>
+      </svg>
+    </div>
+
+    <!-- Floating Particles -->
+    <div class="footer-particles" aria-hidden="true"></div>
+
+    <!-- Animated Background Gradient Orbs -->
+    <div class="footer-bg-effects" aria-hidden="true">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand" data-tilt>
+          <div class="footer-logo-wrapper">
+            <div class="logo-glow-ring"></div>
+            <div class="footer-logo">
+              <span class="logo-mark neon-glow">RB</span>
+              <span class="logo-text gradient-text">Portfolio</span>
+            </div>
+          </div>
+          <p class="footer-tagline">
+            <span class="typing-effect">Crafting exceptional digital experiences</span>
+            <span class="tech-tag">with modern web technologies</span>
+          </p>
+          <!-- Killer Social Links with 3D Effect -->
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/rohan-bhushan-bawchikar-25725724a/" target="_blank" rel="noopener"
+              title="LinkedIn" class="social-link-3d" data-social="linkedin">
+              <div class="social-inner">
+                <div class="social-face social-front"><i class="fa-brands fa-linkedin"></i></div>
+                <div class="social-face social-back"><span>LinkedIn</span></div>
+              </div>
+              <div class="social-ripple"></div>
+            </a>
+            <a href="https://github.com/rohanbawchikar" target="_blank" rel="noopener" title="GitHub"
+              class="social-link-3d" data-social="github">
+              <div class="social-inner">
+                <div class="social-face social-front"><i class="fa-brands fa-github"></i></div>
+                <div class="social-face social-back"><span>GitHub</span></div>
+              </div>
+              <div class="social-ripple"></div>
+            </a>
+            <a href="mailto:ro.bawchikar07@gmail.com" title="Email" class="social-link-3d" data-social="email">
+              <div class="social-inner">
+                <div class="social-face social-front"><i class="fa-solid fa-envelope"></i></div>
+                <div class="social-face social-back"><span>Email</span></div>
+              </div>
+              <div class="social-ripple"></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column glass-card" data-tilt>
+            <div class="card-shine"></div>
+            <h3 class="footer-title">
+              <span class="title-icon">🚀</span>
+              <span class="title-text">Quick Links</span>
+            </h3>
+            <ul class="footer-list">
+              <li><a href="#home"><span class="link-bullet">→</span><span>Home</span></a></li>
+              <li><a href="#about"><span class="link-bullet">→</span><span>About</span></a></li>
+              <li><a href="#projects"><span class="link-bullet">→</span><span>Projects</span></a></li>
+              <li><a href="#experience"><span class="link-bullet">→</span><span>My Journey</span></a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column glass-card" data-tilt>
+            <div class="card-shine"></div>
+            <h3 class="footer-title">
+              <span class="title-icon">✨</span>
+              <span class="title-text">Explore</span>
+            </h3>
+            <ul class="footer-list">
+              <li><a href="#skills"><span class="link-bullet">→</span><span>Skills</span></a></li>
+              <li><a href="#certifications"><span class="link-bullet">→</span><span>Certifications</span></a></li>
+              <li><a href="#contact"><span class="link-bullet">→</span><span>Contact</span></a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column glass-card" data-tilt>
+            <div class="card-shine"></div>
+            <h3 class="footer-title">
+              <span class="title-icon">📱</span>
+              <span class="title-text">Contact</span>
+            </h3>
+            <ul class="footer-list contact-list">
+              <li><i class="fa-solid fa-envelope contact-icon"></i><span>ro.bawchikar07@gmail.com</span></li>
+              <li><i class="fa-solid fa-phone contact-icon"></i><span>7300381445</span></li>
+              <li><i class="fa-solid fa-location-dot contact-icon"></i><span>Pune, Maharashtra</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animated Divider with Morphing Shapes -->
+      <div class="footer-divider-animated">
+        <div class="divider-line"></div>
+        <div class="divider-shapes">
+          <div class="morph-shape shape-1"></div>
+          <div class="morph-shape shape-2"></div>
+          <div class="morph-shape shape-3"></div>
+        </div>
+      </div>
+
+      <!-- Bottom Section with Glowing Text -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p class="footer-copyright">
+            <span class="copyright-icon">©</span>
+            <span id="year"></span>
+            <span class="gradient-text-alt">Rohan Bawchikar</span>
+            <span>All rights reserved.</span>
+          </p>
+          <p class="footer-credit">
+            <span>Designed & Built with</span>
+            <i class="fa-solid fa-heart heart-pulse"></i>
+            <span>by <strong class="gradient-text-alt">Rohan</strong></span>
+          </p>
+        </div>
+
+        <!-- Tech Stack Badges with Animation -->
+        <div class="tech-badges">
+          <span class="tech-badge" data-tech="html">HTML5</span>
+          <span class="tech-badge" data-tech="css">CSS3</span>
+          <span class="tech-badge" data-tech="js">JavaScript</span>
+          <span class="tech-badge" data-tech="react">React</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <!-- Modular JavaScript -->
   <script src="js/theme-toggle.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/scroll-effects.js"></script>
   <script src="js/typing-effect.js"></script>
+  <script src="js/contact-form.js"></script>
+  <script src="js/ultra-smooth-scroll.js"></script>
   <script src="js/main.js"></script>
 </body>
 

@@ -1,0 +1,1026 @@
+/* ===================================
+   CONTACT FORM MODAL - INSANE DESIGN 🔥
+   WITH KILLER EFFECTS & ANIMATIONS
+   =================================== */
+
+/* Modal Base Styles */
+.contact-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.contact-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contact-modal.active .modal-container {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+/* Modal Overlay with Backdrop Blur */
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    animation: fadeIn 0.4s ease;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Modal Particles */
+.modal-particles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.modal-particles::before,
+.modal-particles::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow:
+        0 0 15px rgba(34, 197, 94, 0.8),
+        80px 60px 0 rgba(59, 130, 246, 0.6),
+        160px 140px 0 rgba(34, 197, 94, 0.7),
+        240px 80px 0 rgba(139, 92, 246, 0.6),
+        320px 180px 0 rgba(34, 197, 94, 0.5),
+        400px 100px 0 rgba(59, 130, 246, 0.7),
+        480px 200px 0 rgba(34, 197, 94, 0.6),
+        560px 150px 0 rgba(139, 92, 246, 0.5);
+    animation: modalParticleFloat 30s linear infinite;
+}
+
+.modal-particles::after {
+    animation-delay: -15s;
+    animation-duration: 35s;
+}
+
+@keyframes modalParticleFloat {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50px, -600px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Modal Orbs */
+.modal-orbs {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.modal-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.2;
+    animation: modalOrbMorph 18s ease-in-out infinite;
+}
+
+.modal-orb-1 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #22c55e, transparent 70%);
+    top: -150px;
+    left: -100px;
+}
+
+.modal-orb-2 {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, #3b82f6, transparent 70%);
+    bottom: -120px;
+    right: -80px;
+    animation-delay: 6s;
+}
+
+.modal-orb-3 {
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, #8b5cf6, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 12s;
+}
+
+@keyframes modalOrbMorph {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+        border-radius: 50% 48% 52% 50%;
+    }
+
+    33% {
+        transform: translate(30px, -30px) scale(1.1);
+        border-radius: 48% 52% 50% 52%;
+    }
+
+    66% {
+        transform: translate(-25px, 25px) scale(0.9);
+        border-radius: 52% 50% 48% 50%;
+    }
+}
+
+/* Modal Container with Glassmorphism */
+.modal-container {
+    position: relative;
+    width: calc(100% - 40px);
+    max-width: 600px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 20px 80px rgba(0, 0, 0, 0.5),
+        0 0 60px rgba(34, 197, 94, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    padding: 50px 40px 40px;
+    transform: translateY(30px) scale(0.95);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Custom Scrollbar for Modal */
+.modal-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.modal-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--button-start), var(--button-end));
+    border-radius: 10px;
+}
+
+.modal-container::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+/* Close Button with Animation */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: rgba(255, 50, 50, 0.15);
+    border-color: rgba(255, 50, 50, 0.3);
+    transform: rotate(90deg) scale(1.1);
+}
+
+.close-line {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: var(--heading);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.close-line-1 {
+    transform: rotate(45deg);
+}
+
+.close-line-2 {
+    transform: rotate(-45deg);
+}
+
+.modal-close:hover .close-line {
+    background: #ef4444;
+}
+
+/* Form Header */
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-icon-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.form-icon-glow {
+    position: absolute;
+    inset: -20px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--accent), transparent 70%);
+    filter: blur(25px);
+    opacity: 0.6;
+    animation: formIconPulse 2s ease-in-out infinite;
+}
+
+@keyframes formIconPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+.form-icon {
+    position: relative;
+    font-size: 48px;
+    color: var(--accent);
+    display: block;
+    animation: iconBounceIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes iconBounceIn {
+    0% {
+        transform: scale(0) rotate(-180deg);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.2) rotate(10deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.form-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--heading);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.title-word {
+    display: inline-block;
+    animation: wordSlideIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) backwards;
+}
+
+.title-word-1 {
+    animation-delay: 0.2s;
+}
+
+.title-word-2 {
+    background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation-delay: 0.35s;
+}
+
+@keyframes wordSlideIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.form-subtitle {
+    color: var(--muted);
+    font-size: 15px;
+    animation: fadeInUp 0.6s ease backwards 0.5s;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    position: relative;
+    animation: formGroupSlideIn 0.5s ease backwards;
+}
+
+.form-group:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+.form-group:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.form-group:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+.form-group:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+@keyframes formGroupSlideIn {
+    from {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Input Wrapper */
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper input,
+.input-wrapper textarea {
+    width: 100%;
+    padding: 18px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    color: var(--heading);
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.input-wrapper textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.input-wrapper input:focus,
+.input-wrapper textarea:focus {
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.input-wrapper input.error,
+.input-wrapper textarea.error {
+    border-color: #ef4444;
+    animation: shakeError 0.5s ease;
+}
+
+@keyframes shakeError {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-8px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(8px);
+    }
+}
+
+/* Floating Label */
+.floating-label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted);
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    padding: 0 6px;
+}
+
+.textarea-wrapper .floating-label {
+    top: 28px;
+    transform: none;
+}
+
+.label-icon {
+    font-size: 14px;
+    color: var(--accent);
+    transition: all 0.3s ease;
+}
+
+/* Floating label states */
+.input-wrapper input:focus+.floating-label,
+.input-wrapper input.has-value+.floating-label,
+.input-wrapper textarea:focus+.floating-label,
+.input-wrapper textarea.has-value+.floating-label {
+    top: -12px;
+    transform: translateY(0) scale(0.85);
+    color: var(--accent);
+    background: var(--bg1);
+    font-weight: 600;
+}
+
+.input-wrapper.focused .label-icon,
+.input-wrapper input.has-value+.floating-label .label-icon {
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* Input Glow Effect */
+.input-glow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+    border-radius: 2px;
+    box-shadow: 0 0 15px var(--accent);
+    transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.input-wrapper.focused .input-glow,
+.input-wrapper input:focus~.input-glow,
+.input-wrapper textarea:focus~.input-glow {
+    width: calc(100% - 40px);
+}
+
+/* Input Error Message */
+.input-error {
+    display: block;
+    color: #ef4444;
+    font-size: 13px;
+    margin-top: 8px;
+    margin-left: 4px;
+    min-height: 18px;
+    animation: errorSlideIn 0.3s ease;
+}
+
+@keyframes errorSlideIn {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Form Actions */
+.form-actions {
+    margin-top: 12px;
+    animation: formGroupSlideIn 0.5s ease backwards 1s;
+}
+
+/* Submit Button with Ripple */
+.form-submit-btn {
+    width: 100%;
+    padding: 18px 32px;
+    background: linear-gradient(135deg, var(--button-start), var(--button-end));
+    border: none;
+    border-radius: 16px;
+    color: #0b1020;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 24px var(--button-shadow);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.form-submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px var(--button-shadow);
+}
+
+.form-submit-btn:active {
+    transform: translateY(-1px);
+}
+
+.form-submit-btn.loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.form-submit-btn.loading .btn-text {
+    opacity: 0.5;
+}
+
+.form-submit-btn.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(11, 16, 32, 0.3);
+    border-top-color: #0b1020;
+    border-radius: 50%;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: buttonSpin 0.8s linear infinite;
+}
+
+@keyframes buttonSpin {
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+.btn-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-content i {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.form-submit-btn:hover .btn-content i {
+    transform: translateX(5px) rotate(10deg);
+}
+
+/* Button Ripple Effect */
+.btn-ripple {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 0;
+}
+
+.form-submit-btn:active .btn-ripple {
+    animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+    to {
+        width: 400px;
+        height: 400px;
+        opacity: 0;
+    }
+}
+
+/* Success/Error Messages */
+.form-message {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(30px);
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.8);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.form-message.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.message-icon-wrapper {
+    margin-bottom: 24px;
+}
+
+/* Success Checkmark Animation */
+.success-checkmark {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.check-icon {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    border-radius: 50%;
+    box-sizing: content-box;
+    border: 4px solid var(--accent);
+}
+
+.check-icon::before {
+    top: 3px;
+    left: -2px;
+    width: 30px;
+    transform-origin: 100% 50%;
+    border-radius: 100px 0 0 100px;
+}
+
+.check-icon::after {
+    top: 0;
+    left: 30px;
+    width: 60px;
+    transform-origin: 0 50%;
+    border-radius: 0 100px 100px 0;
+    animation: rotateCircle 4.25s ease-in;
+}
+
+.icon-line {
+    height: 5px;
+    background-color: var(--accent);
+    display: block;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+}
+
+.line-tip {
+    top: 46px;
+    left: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+    animation: lineCheckTip 0.75s;
+}
+
+.line-long {
+    top: 38px;
+    right: 8px;
+    width: 47px;
+    transform: rotate(-45deg);
+    animation: lineCheckLong 0.75s;
+}
+
+.icon-circle {
+    top: -4px;
+    left: -4px;
+    z-index: 10;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    box-sizing: content-box;
+    border: 4px solid rgba(34, 197, 94, 0.2);
+}
+
+.icon-fix {
+    top: 8px;
+    width: 5px;
+    left: 26px;
+    z-index: 1;
+    height: 85px;
+    position: absolute;
+    transform: rotate(-45deg);
+    background-color: var(--bg1);
+}
+
+@keyframes rotateCircle {
+    0% {
+        transform: rotate(-45deg);
+    }
+
+    5% {
+        transform: rotate(-45deg);
+    }
+
+    12% {
+        transform: rotate(-405deg);
+    }
+
+    100% {
+        transform: rotate(-405deg);
+    }
+}
+
+@keyframes lineCheckTip {
+    0% {
+        width: 0;
+        left: 1px;
+        top: 19px;
+    }
+
+    54% {
+        width: 0;
+        left: 1px;
+        top: 19px;
+    }
+
+    70% {
+        width: 50px;
+        left: -8px;
+        top: 37px;
+    }
+
+    84% {
+        width: 17px;
+        left: 21px;
+        top: 48px;
+    }
+
+    100% {
+        width: 25px;
+        left: 14px;
+        top: 45px;
+    }
+}
+
+@keyframes lineCheckLong {
+    0% {
+        width: 0;
+        right: 46px;
+        top: 54px;
+    }
+
+    65% {
+        width: 0;
+        right: 46px;
+        top: 54px;
+    }
+
+    84% {
+        width: 55px;
+        right: 0px;
+        top: 35px;
+    }
+
+    100% {
+        width: 47px;
+        right: 8px;
+        top: 38px;
+    }
+}
+
+/* Error Icon */
+.error-icon {
+    font-size: 64px;
+    color: #ef4444;
+    animation: errorShake 0.5s ease;
+}
+
+@keyframes errorShake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
+.message-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--heading);
+    margin-bottom: 12px;
+}
+
+.form-success .message-title {
+    color: var(--accent);
+}
+
+.form-error .message-title {
+    color: #ef4444;
+}
+
+.message-text {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.message-close-btn {
+    padding: 12px 32px;
+    background: linear-gradient(135deg, var(--button-start), var(--button-end));
+    border: none;
+    border-radius: 12px;
+    color: #0b1020;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px var(--button-shadow);
+}
+
+.message-close-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--button-shadow);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal-container {
+        width: calc(100% - 30px);
+        padding: 40px 25px 30px;
+        border-radius: 24px;
+        max-height: calc(100vh - 30px);
+    }
+
+    .form-title {
+        font-size: 32px;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .form-icon {
+        font-size: 40px;
+    }
+
+    .form-subtitle {
+        font-size: 14px;
+    }
+
+    .input-wrapper input,
+    .input-wrapper textarea {
+        padding: 16px 18px;
+        font-size: 15px;
+    }
+
+    .form-submit-btn {
+        padding: 16px 28px;
+        font-size: 16px;
+    }
+
+    .message-title {
+        font-size: 24px;
+    }
+
+    .form-message {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-container {
+        width: calc(100% - 20px);
+        padding: 35px 20px 25px;
+    }
+
+    .modal-close {
+        width: 38px;
+        height: 38px;
+        top: 15px;
+        right: 15px;
+    }
+
+    .close-line {
+        width: 18px;
+    }
+
+    .form-title {
+        font-size: 28px;
+    }
+
+    .form-icon {
+        font-size: 36px;
+    }
+
+    .check-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .line-tip {
+        width: 20px;
+        top: 35px;
+        left: 10px;
+    }
+
+    .line-long {
+        width: 35px;
+        top: 28px;
+        right: 6px;
+    }
+}
+
+/* Accessibility - Reduce Motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .modal-particles,
+    .modal-orbs,
+    .form-icon-glow,
+    .input-glow {
+        animation: none !important;
+    }
+
+    .contact-modal.active .modal-container {
+        transform: translateY(0) scale(1);
+    }
+
+    .form-submit-btn:hover {
+        transform: none;
+    }
+
+    .success-checkmark *,
+    .error-icon {
+        animation: none !important;
+    }
+}

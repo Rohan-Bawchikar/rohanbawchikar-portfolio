@@ -1,0 +1,444 @@
+/* ===================================
+   ULTIMATE LIGHT MODE - ALL KILLER EFFECTS 🌟
+   Glassmorphism + Neumorphism + Liquid Glass
+   + Aurora Gradients + Aero Glass Depth
+   MASCULINE BLUE/TEAL PALETTE
+   =================================== */
+
+/* ========== NEUMORPHIC CARDS ========== */
+[data-theme="light"] .glass-card,
+[data-theme="light"] .service,
+[data-theme="light"] .exp-card,
+[data-theme="light"] .skill-card,
+[data-theme="light"] .cert-card,
+[data-theme="light"] .project {
+    /* Neumorphic background with gradient */
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+
+    /* Neumorphic shadows - soft 3D effect */
+    box-shadow:
+        /* Top-left light */
+        -12px -12px 24px rgba(255, 255, 255, 0.8),
+        /* Bottom-right dark */
+        12px 12px 24px rgba(14, 165, 233, 0.15),
+        /* Inner glow */
+        inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+        inset -2px -2px 5px rgba(14, 165, 233, 0.1),
+        /* Outer aero glow */
+        0 0 40px rgba(59, 130, 246, 0.1);
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-top-color: rgba(255, 255, 255, 0.9);
+    border-left-color: rgba(255, 255, 255, 0.9);
+
+    /* Liquid glass transform origin */
+    transform-style: preserve-3d;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+[data-theme="light"] .glass-card:hover,
+[data-theme="light"] .service:hover,
+[data-theme="light"] .exp-card:hover,
+[data-theme="light"] .skill-card:hover,
+[data-theme="light"] .cert-card:hover {
+    /* Liquid glass transform */
+    transform: translateY(-12px) scale(1.02);
+
+    /* Enhanced neumorphic shadows on hover */
+    box-shadow:
+        -16px -16px 32px rgba(255, 255, 255, 0.9),
+        16px 16px 32px rgba(14, 165, 233, 0.2),
+        inset 3px 3px 8px rgba(255, 255, 255, 0.6),
+        inset -3px -3px 8px rgba(14, 165, 233, 0.15),
+        0 0 60px rgba(59, 130, 246, 0.2),
+        /* Extra aero depth */
+        0 20px 60px rgba(14, 165, 233, 0.1);
+
+    /* Liquid glass shimmer */
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4));
+}
+
+/* ========== AERO GLASS NAVBAR ========== */
+[data-theme="light"] .navbar {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.3) 100%);
+    backdrop-filter: blur(30px) saturate(200%);
+    -webkit-backdrop-filter: blur(30px) saturate(200%);
+
+    /* Aero glass border */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+
+    /* Multi-layer aero shadow */
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.8) inset,
+        0 4px 24px rgba(59, 130, 246, 0.08),
+        0 8px 40px rgba(14, 165, 233, 0.06);
+}
+
+/* ========== NEUMORPHIC + LIQUID BUTTONS ========== */
+[data-theme="light"] .btn,
+[data-theme="light"] .form-submit-btn,
+[data-theme="light"] .message-close-btn {
+    /* Liquid glass gradient */
+    background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 50%, #6366f1 100%);
+    background-size: 200% auto;
+
+    color: #ffffff;
+    font-weight: 700;
+
+    /* Neumorphic button shadows */
+    box-shadow:
+        -4px -4px 12px rgba(255, 255, 255, 0.5),
+        4px 4px 12px rgba(14, 165, 233, 0.4),
+        inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+        0 0 30px rgba(99, 102, 241, 0.3);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-top-color: rgba(255, 255, 255, 0.6);
+    border-left-color: rgba(255, 255, 255, 0.6);
+
+    /* Liquid animation prep */
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+[data-theme="light"] .btn::before,
+[data-theme="light"] .form-submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+[data-theme="light"] .btn:hover,
+[data-theme="light"] .form-submit-btn:hover {
+    /* Liquid flow animation */
+    background-position: 100% 0;
+
+    /* Enhanced neumorphic shadows */
+    box-shadow:
+        -6px -6px 16px rgba(255, 255, 255, 0.7),
+        6px 6px 16px rgba(14, 165, 233, 0.5),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.4),
+        0 0 40px rgba(99, 102, 241, 0.4),
+        0 8px 32px rgba(14, 165, 233, 0.3);
+
+    transform: translateY(-3px) scale(1.02);
+}
+
+[data-theme="light"] .btn:hover::before,
+[data-theme="light"] .form-submit-btn:hover::before {
+    /* Liquid glass shimmer */
+    left: 100%;
+}
+
+/* ========== LOGO WITH NEUMORPHIC DEPTH ========== */
+[data-theme="light"] .logo-mark,
+[data-theme="light"] .footer-logo .logo-mark,
+[data-theme="light"] .neon-glow {
+    background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+    color: #ffffff;
+
+    /* Neumorphic logo shadow */
+    box-shadow:
+        -3px -3px 8px rgba(255, 255, 255, 0.6),
+        3px 3px 8px rgba(14, 165, 233, 0.3),
+        inset 1px 1px 3px rgba(255, 255, 255, 0.3),
+        0 0 20px rgba(99, 102, 241, 0.4);
+}
+
+[data-theme="light"] .logo-text,
+[data-theme="light"] .gradient-text,
+[data-theme="light"] .footer-logo .logo-text {
+    background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 50%, #6366f1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    /* Text depth */
+    filter: drop-shadow(0 2px 4px rgba(14, 165, 233, 0.3));
+}
+
+/* ========== AERO GLASS FOOTER ========== */
+[data-theme="light"] .footer {
+    background:
+        /* Top aero glow */
+        radial-gradient(ellipse 100% 40% at 50% 0%, rgba(59, 130, 246, 0.15), transparent 60%),
+        /* Aurora gradient */
+        linear-gradient(180deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0.6) 100%);
+
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+
+    /* Aero glass depth */
+    box-shadow:
+        0 -1px 0 rgba(255, 255, 255, 0.8) inset,
+        0 -20px 60px rgba(59, 130, 246, 0.1),
+        0 -10px 40px rgba(14, 165, 233, 0.08);
+}
+
+/* Vibrant footer waves */
+[data-theme="light"] .wave path {
+    stroke: #0ea5e9;
+    stroke-width: 2;
+    fill: rgba(14, 165, 233, 0.12);
+    filter: drop-shadow(0 0 20px rgba(14, 165, 233, 0.5));
+}
+
+/* Aurora orbs in footer */
+[data-theme="light"] .gradient-orb {
+    opacity: 0.35;
+    filter: blur(90px);
+}
+
+[data-theme="light"] .orb-1 {
+    background: radial-gradient(circle, #0ea5e9, transparent 70%);
+}
+
+[data-theme="light"] .orb-2 {
+    background: radial-gradient(circle, #3b82f6, transparent 70%);
+}
+
+[data-theme="light"] .orb-3 {
+    background: radial-gradient(circle, #6366f1, transparent 70%);
+}
+
+/* ========== LIQUID GLASS SOCIAL CARDS ========== */
+[data-theme="light"] .social-link-3d .social-front {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4));
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+
+    /* Neumorphic card shadow */
+    box-shadow:
+        -4px -4px 10px rgba(255, 255, 255, 0.8),
+        4px 4px 10px rgba(14, 165, 233, 0.15);
+}
+
+[data-theme="light"] .social-link-3d .social-back {
+    background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+    border-color: rgba(255, 255, 255, 0.4);
+
+    /* Aero glow */
+    box-shadow:
+        0 0 30px rgba(14, 165, 233, 0.6),
+        0 4px 16px rgba(99, 102, 241, 0.4);
+}
+
+/* ========== AERO GLASS MODAL ========== */
+[data-theme="light"] .modal-overlay {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+}
+
+[data-theme="light"] .modal-container {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5));
+    backdrop-filter: blur(40px) saturate(200%);
+    -webkit-backdrop-filter: blur(40px) saturate(200%);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-top-color: rgba(255, 255, 255, 0.95);
+    border-left-color: rgba(255, 255, 255, 0.95);
+
+    /* Aero glass depth */
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.9) inset,
+        0 20px 80px rgba(59, 130, 246, 0.15),
+        0 10px 40px rgba(14, 165, 233, 0.1),
+        0 0 60px rgba(99, 102, 241, 0.08);
+}
+
+/* ========== NEUMORPHIC FORM INPUTS ========== */
+[data-theme="light"] .input-wrapper input,
+[data-theme="light"] .input-wrapper textarea {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    color: #1e1e3f;
+
+    /* Neumorphic input */
+    box-shadow:
+        inset 2px 2px 5px rgba(14, 165, 233, 0.08),
+        inset -2px -2px 5px rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="light"] .input-wrapper input:focus,
+[data-theme="light"] .input-wrapper textarea:focus {
+    border-color: #0ea5e9;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+
+    /* Enhanced neumorphic on focus */
+    box-shadow:
+        inset 3px 3px 8px rgba(14, 165, 233, 0.12),
+        inset -3px -3px 8px rgba(255, 255, 255, 0.9),
+        0 0 0 4px rgba(14, 165, 233, 0.1),
+        0 0 30px rgba(99, 102, 241, 0.15);
+}
+
+[data-theme="light"] .floating-label {
+    color: #525266;
+}
+
+[data-theme="light"] .input-wrapper input:focus+.floating-label,
+[data-theme="light"] .input-wrapper input.has-value+.floating-label,
+[data-theme="light"] .input-wrapper textarea:focus+.floating-label,
+[data-theme="light"] .input-wrapper textarea.has-value+.floating-label {
+    color: #0ea5e9;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+    backdrop-filter: blur(10px);
+}
+
+[data-theme="light"] .label-icon {
+    color: #0ea5e9;
+}
+
+[data-theme="light"] .input-glow {
+    background: linear-gradient(90deg, #0ea5e9, #3b82f6);
+    box-shadow: 0 0 25px rgba(14, 165, 233, 0.6);
+}
+
+/* ========== NEUMORPHIC CTA ========== */
+[data-theme="light"] .cta-inner {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
+    backdrop-filter: blur(25px) saturate(180%);
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-top-color: rgba(255, 255, 255, 0.9);
+
+    /* Neumorphic CTA */
+    box-shadow:
+        -10px -10px 20px rgba(255, 255, 255, 0.8),
+        10px 10px 20px rgba(14, 165, 233, 0.15),
+        inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+        0 0 40px rgba(59, 130, 246, 0.1);
+}
+
+/* ========== AURORA PARTICLES ========== */
+[data-theme="light"] .modal-particles::before,
+[data-theme="light"] .modal-particles::after {
+    background: #0ea5e9;
+    box-shadow:
+        0 0 25px rgba(14, 165, 233, 0.9),
+        80px 60px 0 rgba(99, 102, 241, 0.8),
+        160px 140px 0 rgba(14, 165, 233, 0.9),
+        240px 80px 0 rgba(59, 130, 246, 0.8),
+        320px 180px 0 rgba(14, 165, 233, 0.7),
+        400px 100px 0 rgba(99, 102, 241, 0.9);
+}
+
+[data-theme="light"] .modal-orb {
+    opacity: 0.3;
+    filter: blur(80px);
+}
+
+[data-theme="light"] .modal-orb-1 {
+    background: radial-gradient(circle, #0ea5e9, transparent 70%);
+}
+
+[data-theme="light"] .modal-orb-2 {
+    background: radial-gradient(circle, #3b82f6, transparent 70%);
+}
+
+[data-theme="light"] .modal-orb-3 {
+    background: radial-gradient(circle, #6366f1, transparent 70%);
+}
+
+/* ========== LIQUID TECH BADGES ========== */
+[data-theme="light"] .tech-badge {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5));
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(14, 165, 233, 0.25);
+
+    /* Neumorphic badge */
+    box-shadow:
+        -2px -2px 5px rgba(255, 255, 255, 0.8),
+        2px 2px 5px rgba(14, 165, 233, 0.15);
+}
+
+[data-theme="light"] .tech-badge:hover {
+    border-color: #0ea5e9;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
+
+    box-shadow:
+        -3px -3px 8px rgba(255, 255, 255, 0.9),
+        3px 3px 8px rgba(14, 165, 233, 0.2),
+        0 0 20px rgba(99, 102, 241, 0.2);
+
+    transform: translateY(-2px);
+}
+
+/* All other light mode styles */
+[data-theme="light"] .divider-line {
+    background: linear-gradient(90deg, transparent 0%, rgba(14, 165, 233, 0.3) 10%, rgba(99, 102, 241, 0.8) 50%, rgba(14, 165, 233, 0.3) 90%, transparent 100%);
+    box-shadow: 0 0 35px rgba(99, 102, 241, 0.6);
+}
+
+[data-theme="light"] .morph-shape {
+    background: linear-gradient(135deg, #0ea5e9, #3b82f6, #6366f1);
+    box-shadow: 0 0 50px rgba(14, 165, 233, 1);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-track {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5));
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #0ea5e9, #3b82f6);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(14, 165, 233, 0.2);
+}
+
+[data-theme="light"] .check-icon,
+[data-theme="light"] .icon-line {
+    border-color: #0ea5e9;
+    background-color: #0ea5e9;
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.5);
+}
+
+[data-theme="light"] .photo-glow-ring {
+    border-color: rgba(14, 165, 233, 0.3);
+    box-shadow: 0 0 30px rgba(14, 165, 233, 0.3), 0 0 60px rgba(99, 102, 241, 0.2);
+}
+
+[data-theme="light"] .photo-border-glow {
+    box-shadow: 0 0 35px rgba(14, 165, 233, 0.5), inset 0 0 35px rgba(99, 102, 241, 0.25);
+}
+
+[data-theme="light"] .hero-logo .logo-word {
+    background-image: linear-gradient(180deg, #0ea5e9, #3b82f6 50%, #6366f1);
+    text-shadow: 0 2px 0 rgba(14, 165, 233, 0.3), 0 4px 8px rgba(99, 102, 241, 0.4), 0 8px 24px rgba(59, 130, 246, 0.2);
+}
+
+[data-theme="light"] .hero-logo .logo-sign {
+    color: #0ea5e9;
+    text-shadow: 0 0 15px #0ea5e9, 0 0 30px rgba(14, 165, 233, 0.6), 0 0 45px rgba(99, 102, 241, 0.4);
+}
+
+[data-theme="light"] .hero-logo .logo-glow {
+    background: radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.95) 0%, rgba(14, 165, 233, 0.7) 35%, rgba(99, 102, 241, 0.3) 60%, transparent 75%);
+    box-shadow: 0 0 90px rgba(14, 165, 233, 0.7), 0 0 160px rgba(99, 102, 241, 0.4);
+}
+
+[data-theme="light"] #backToTop {
+    background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: -3px -3px 8px rgba(255, 255, 255, 0.6), 3px 3px 8px rgba(14, 165, 233, 0.3), 0 0 20px rgba(99, 102, 241, 0.3);
+}
+
+[data-theme="light"] #backToTop:hover {
+    box-shadow: -4px -4px 12px rgba(255, 255, 255, 0.7), 4px 4px 12px rgba(14, 165, 233, 0.4), 0 0 30px rgba(99, 102, 241, 0.4), 0 6px 24px rgba(14, 165, 233, 0.3);
+}

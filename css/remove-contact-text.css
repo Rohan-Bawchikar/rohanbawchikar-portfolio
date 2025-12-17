@@ -1,0 +1,50 @@
+/* ===================================
+   AGGRESSIVE CONTACT TEXT REMOVAL 
+   =================================== */
+
+/* Hide ALL possible "Contact" text overlays */
+.photo-container *::before,
+.photo-container *::after,
+.photo-wrapper *::before,
+.photo-wrapper *::after,
+.photo-frame *::before,
+.photo-frame *::after,
+.photo-inner *::before,
+.photo-inner *::after,
+.hero *::before,
+.hero *::after {
+    content: "" !important;
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* Remove any overlay divs */
+.photo-overlay,
+.photo-overlay-text,
+.contact-overlay,
+[class*="overlay"] {
+    display: none !important;
+}
+
+/* MOBILE SPECIFIC - Extra aggressive */
+@media (max-width: 768px) {
+
+    .photo-container,
+    .photo-wrapper,
+    .photo-frame,
+    .photo-inner {
+        overflow: hidden !important;
+    }
+
+    .photo-container *,
+    .photo-wrapper *,
+    .photo-frame * {
+        pointer-events: none;
+    }
+
+    .profile-img,
+    .photo-status {
+        pointer-events: auto !important;
+    }
+}

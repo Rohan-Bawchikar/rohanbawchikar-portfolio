@@ -1,0 +1,110 @@
+/* ===================================
+   MOBILE NAVBAR & PHOTO FIX - PROFESSIONAL
+   =================================== */
+
+@media (max-width: 768px) {
+
+    /* ========== NAVBAR LAYOUT ========== */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px !important;
+    }
+
+    /* Logo on the LEFT */
+    .brand {
+        order: 1;
+        margin-right: auto;
+    }
+
+    /* PROFESSIONAL HAMBURGER MENU on the RIGHT */
+    .menu-toggle {
+        order: 3;
+        margin-left: auto;
+        display: flex !important;
+        flex-direction: column;
+        gap: 5px;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .menu-toggle:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Hamburger lines - STYLED */
+    .menu-toggle span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: var(--heading);
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    /* Animated hamburger */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translateY(8px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-8px);
+    }
+
+    /* Theme toggle in the middle */
+    .theme-toggle-wrapper {
+        order: 2;
+    }
+
+    /* ========== REMOVE CONTACT TEXT FROM PHOTO ========== */
+
+    /* Hide ALL pseudo-elements that might contain "Contact" */
+    .photo-container::before,
+    .photo-container::after,
+    .photo-wrapper::before,
+    .photo-wrapper::after,
+    .photo-frame::before,
+    .photo-frame::after,
+    .photo-inner::before,
+    .photo-inner::after,
+    .photo-overlay::before,
+    .photo-overlay::after {
+        display: none !important;
+        content: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+
+    /* Hide the overlay div itself */
+    .photo-overlay {
+        display: none !important;
+    }
+
+    /* Ensure photo is clean */
+    .profile-img {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Keep status badge visible and positioned correctly */
+    .photo-status {
+        position: absolute !important;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        background: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+}

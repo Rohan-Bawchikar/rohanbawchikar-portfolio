@@ -1,0 +1,56 @@
+/* ===================================
+   FORCE BLACK TEXT IN ALL SECTIONS (Light Mode)
+   =================================== */
+
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6,
+[data-theme="light"] p,
+[data-theme="light"] span,
+[data-theme="light"] a,
+[data-theme="light"] li,
+[data-theme="light"] .heading,
+[data-theme="light"] .text,
+[data-theme="light"] .tagline,
+[data-theme="light"] .hero h1,
+[data-theme="light"] .hero h2,
+[data-theme="light"] .hero .tagline,
+[data-theme="light"] .about h2,
+[data-theme="light"] .about p,
+[data-theme="light"] .projects h2,
+[data-theme="light"] .project h3,
+[data-theme="light"] .services h2,
+[data-theme="light"] .service h3,
+[data-theme="light"] .contact h2,
+[data-theme="light"] .contact p,
+[data-theme="light"] .contact a,
+[data-theme="light"] .skills h2,
+[data-theme="light"] .experience h2,
+[data-theme="light"] .cta h2,
+[data-theme="light"] .cta p {
+    color: #000000 !important;
+}
+
+/* Ensure all section headings are black */
+[data-theme="light"] .section-title,
+[data-theme="light"] .section-subtitle {
+    color: #000000 !important;
+}
+
+/* Contact section specific */
+[data-theme="light"] .contact-info,
+[data-theme="light"] .contact-item,
+[data-theme="light"] .contact-link {
+    color: #000000 !important;
+}
+
+/* Override any gradient text */
+[data-theme="light"] .gradient-text {
+    background: none !important;
+    color: #000000 !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+}
