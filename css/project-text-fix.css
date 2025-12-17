@@ -1,0 +1,39 @@
+/* FORCE PROJECT TEXT VISIBILITY - OVERRIDE ALL CONFLICTS */
+
+.projects .project-title,
+.project-card .project-title,
+.project-title {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    font-weight: 700 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+}
+
+.projects .project-description,
+.project-card .project-description,
+.project-description {
+    color: #e5e7eb !important;
+    opacity: 1 !important;
+    font-weight: 400 !important;
+}
+
+.projects .highlight-item,
+.project-card .highlight-item,
+.highlight-item,
+.highlight-item span {
+    color: #d1d5db !important;
+    opacity: 1 !important;
+}
+
+/* Force all project text elements */
+.project-card-inner * {
+    opacity: 1 !important;
+}
+
+.project-card-inner h3 {
+    color: #ffffff !important;
+}
+
+.project-card-inner p {
+    color: #e5e7eb !important;
+}

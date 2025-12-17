@@ -1,0 +1,304 @@
+/* ==========================================
+   HORIZONTAL CAROUSEL JOURNEY
+   Dark Professional Theme (NO Rainbow!)
+   ========================================== */
+
+/* Section */
+.carousel-journey {
+    position: relative;
+    padding: 100px 20px;
+    background: linear-gradient(180deg, #0a192f 0%, #020c1b 100%);
+    overflow: hidden;
+}
+
+/* Header */
+.carousel-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.carousel-title {
+    font-size: clamp(48px, 7vw, 72px);
+    font-weight: 900;
+    color: #e6f1ff;
+    margin-bottom: 12px;
+}
+
+.carousel-subtitle {
+    font-size: 18px;
+    color: #8892b0;
+}
+
+/* Nav Arrows */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(0, 217, 255, 0.1);
+    border: 2px solid #00d9ff;
+    color: #00d9ff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-nav:hover {
+    background: rgba(0, 217, 255, 0.2);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 0 30px rgba(0, 217, 255, 0.5);
+}
+
+.carousel-nav.prev {
+    left: 20px;
+}
+
+.carousel-nav.next {
+    right: 20px;
+}
+
+/* Carousel Container */
+.carousel-container {
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Carousel Track */
+.carousel-track {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    width: max-content;
+}
+
+/* Journey Card */
+.journey-card {
+    position: relative;
+    width: 400px;
+    min-height: 550px;
+    background: rgba(10, 25, 47, 0.8);
+    border-radius: 20px;
+    padding: 40px 32px;
+    scroll-snap-align: center;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    border: 1px solid var(--card-border);
+}
+
+/* Card Color Borders */
+.journey-card[data-index="0"] {
+    --card-border: #00d9ff;
+}
+
+.journey-card[data-index="1"] {
+    --card-border: #00ff41;
+}
+
+.journey-card[data-index="2"] {
+    --card-border: #00d9ff;
+}
+
+.journey-card[data-index="3"] {
+    --card-border: #ff6b35;
+}
+
+.journey-card[data-index="4"] {
+    --card-border: #00ff41;
+}
+
+/* Glow Border */
+.card-glow-border {
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg, var(--card-border), transparent);
+    border-radius: 20px;
+    opacity: 0.3;
+    filter: blur(10px);
+    z-index: -1;
+    transition: opacity 0.5s ease;
+}
+
+.journey-card:hover .card-glow-border {
+    opacity: 0.8;
+}
+
+/* Card Number */
+.card-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 80px;
+    font-weight: 900;
+    color: rgba(0, 217, 255, 0.05);
+    line-height: 1;
+}
+
+/* Card Icon */
+.card-icon-large {
+    font-size: 64px;
+    color: var(--card-border);
+    margin-bottom: 24px;
+    filter: drop-shadow(0 0 15px var(--card-border));
+}
+
+/* Card Title */
+.card-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #e6f1ff;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+/* Card Description */
+.card-desc {
+    font-size: 15px;
+    color: #8892b0;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 28px;
+}
+
+.skill-badge {
+    padding: 6px 16px;
+    background: rgba(0, 217, 255, 0.1);
+    border: 1px solid rgba(0, 217, 255, 0.3);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #00d9ff;
+    transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+    background: rgba(0, 217, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Progress Section */
+.progress-section {
+    margin-bottom: 24px;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #a8b2d1;
+}
+
+.progress-percent {
+    color: #00ff41;
+    font-weight: 700;
+}
+
+.progress-track {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: var(--progress);
+    background: linear-gradient(90deg, #00d9ff, #00ff41);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.6);
+    transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Achievement List */
+.achievement-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.achievement-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    font-size: 14px;
+    color: #a8b2d1;
+}
+
+.achievement-list i {
+    color: #00ff41;
+    font-size: 16px;
+}
+
+/* Dots Navigation */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 40px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(0, 217, 255, 0.2);
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #00d9ff;
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.8);
+}
+
+.dot:hover {
+    background: rgba(0, 217, 255, 0.4);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .carousel-journey {
+        padding: 60px 15px;
+    }
+
+    .carousel-nav {
+        display: none;
+    }
+
+    .journey-card {
+        width: 320px;
+        min-height: 500px;
+        padding: 32px 24px;
+    }
+
+    .card-title {
+        font-size: 24px;
+    }
+
+    .card-icon-large {
+        font-size: 48px;
+    }
+
+    .card-number {
+        font-size: 60px;
+    }
+}
