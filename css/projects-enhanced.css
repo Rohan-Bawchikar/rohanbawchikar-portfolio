@@ -404,28 +404,33 @@
 }
 
 /* Light Mode */
-body:not(.dark-mode) .project-card {
-    background: rgba(0, 0, 0, 0.02);
-    border-color: rgba(0, 0, 0, 0.1);
-}
-
-body:not(.dark-mode) .project-card:hover {
-    background: rgba(0, 0, 0, 0.04);
-    border-color: rgba(139, 92, 246, 0.3);
+[data-theme="light"] .project-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+    border-color: rgba(14, 165, 233, 0.1);
     box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.1),
-        0 0 40px rgba(139, 92, 246, 0.15);
+        -10px -10px 20px rgba(255, 255, 255, 1),
+        10px 10px 20px rgba(14, 165, 233, 0.05);
 }
 
-body:not(.dark-mode) .project-title {
-    color: #1a1a1a;
+[data-theme="light"] .project-card:hover {
+    background: #ffffff;
+    border-color: rgba(14, 165, 233, 0.3);
+    box-shadow:
+        0 20px 60px rgba(14, 165, 233, 0.1),
+        0 0 40px rgba(14, 165, 233, 0.15);
 }
 
-body:not(.dark-mode) .project-description,
-body:not(.dark-mode) .highlight-item {
-    color: #333;
+[data-theme="light"] .project-title {
+    color: #0f172a !important;
+}
+
+[data-theme="light"] .project-description,
+[data-theme="light"] .highlight-item {
+    color: #475569 !important;
     opacity: 1;
 }
+
 
 /* Responsive */
 @media (max-width: 768px) {

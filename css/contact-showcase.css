@@ -473,3 +473,65 @@
         opacity: 0;
     }
 }
+
+/* =========================================
+   LIGHT MODE OVERRIDES
+   ========================================= */
+
+[data-theme="light"] .contact-showcase {
+    background: linear-gradient(180deg, #f1f5f9 0%, #e2e8f0 100%);
+}
+
+[data-theme="light"] .showcase-orb {
+    opacity: 0.4;
+    filter: blur(120px);
+}
+
+[data-theme="light"] .showcase-subtitle {
+    color: #475569;
+}
+
+[data-theme="light"] .card-inner {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(14, 165, 233, 0.1);
+    box-shadow:
+        -10px -10px 20px rgba(255, 255, 255, 1),
+        10px 10px 20px rgba(14, 165, 233, 0.05);
+}
+
+[data-theme="light"] .contact-card:hover .card-inner {
+    background: #ffffff;
+    border-color: rgba(14, 165, 233, 0.3);
+}
+
+[data-theme="light"] .card-text {
+    color: #64748b;
+}
+
+[data-theme="light"] .portfolio-highlights {
+    background: rgba(255, 255, 255, 0.5);
+    border-color: rgba(14, 165, 233, 0.1);
+}
+
+[data-theme="light"] .highlight-item {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 4px 4px 10px rgba(14, 165, 233, 0.05);
+}
+
+[data-theme="light"] .highlight-item:hover {
+    background: #ffffff;
+}
+
+[data-theme="light"] .highlight-number {
+    color: #0f172a;
+}
+
+[data-theme="light"] .highlight-label {
+    color: #64748b;
+}
+
+[data-theme="light"] .showcase-particle {
+    background: #0ea5e9;
+    opacity: 0.3;
+}

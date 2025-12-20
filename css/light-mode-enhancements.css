@@ -442,3 +442,58 @@
 [data-theme="light"] #backToTop:hover {
     box-shadow: -4px -4px 12px rgba(255, 255, 255, 0.7), 4px 4px 12px rgba(14, 165, 233, 0.4), 0 0 30px rgba(99, 102, 241, 0.4), 0 6px 24px rgba(14, 165, 233, 0.3);
 }
+
+/* ========== EXPERIENCE CARD FIXES ========== */
+[data-theme="light"] .step-badge {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(14, 165, 233, 0.05));
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    color: #0ea5e9;
+}
+
+[data-theme="light"] .tag {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(14, 165, 233, 0.15);
+    color: #475569;
+}
+
+[data-theme="light"] .tag:hover {
+    background: #ffffff;
+    border-color: #0ea5e9;
+    color: #0ea5e9;
+}
+
+[data-theme="light"] .expand-btn {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    color: #475569;
+}
+
+[data-theme="light"] .expand-btn:hover {
+    background: #ffffff;
+    border-color: #0ea5e9;
+    color: #0ea5e9;
+}
+
+[data-theme="light"] .details-list li {
+    color: #475569;
+}
+
+[data-theme="light"] .card-description {
+    color: #64748b;
+}
+
+/* ========== SECTION SEAMLESS TRANSITION ========== */
+[data-theme="light"] section {
+    background: transparent;
+}
+
+[data-theme="light"] .projects-bg,
+[data-theme="light"] .experience-bg,
+[data-theme="light"] .skills-bg {
+    opacity: 0.5;
+}
+
+[data-theme="light"] .orb {
+    opacity: 0.4;
+    filter: blur(100px);
+}
