@@ -28,6 +28,10 @@
   <link rel="stylesheet" href="css/carousel-journey.css">
   <link rel="stylesheet" href="css/projects-enhanced.css">
   <link rel="stylesheet" href="css/project-text-fix.css">
+  <link rel="stylesheet" href="css/profile-photo-killer.css">
+  <link rel="stylesheet" href="css/about-killer.css">
+  <link rel="stylesheet" href="css/services-killer.css">
+  <link rel="stylesheet" href="css/responsive-enhancements.css">
 
 </head>
 
@@ -153,14 +157,186 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="about" id="about">
-    <h2 class="heading">About Me</h2>
-    <p>
-      Hi! I'm <strong>Rohan Bawchikar</strong>, a Computer Engineering student
-      with a strong interest in Frontend Web Development. I enjoy bringing
-      creative ideas to life through clean code, modern design, and intuitive user interfaces.
-    </p>
+  <!-- About Section - KILLER ANIMATED VERSION -->
+  <section class="about-killer" id="about">
+    <!-- Animated Background -->
+    <div class="about-bg" aria-hidden="true">
+      <div class="about-orb about-orb-1"></div>
+      <div class="about-orb about-orb-2"></div>
+      <div class="about-orb about-orb-3"></div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div class="about-particles" id="aboutParticles" aria-hidden="true"></div>
+
+    <div class="about-container">
+      <!-- Section Header -->
+      <div class="about-header" data-animate>
+        <h2 class="about-title">
+          <span class="about-title-line">About</span>
+          <span class="about-title-accent">Me</span>
+        </h2>
+        <div class="about-title-underline"></div>
+      </div>
+
+      <!-- Main Content Grid -->
+      <div class="about-content-grid">
+
+        <!-- Left Side: Profile Card -->
+        <div class="about-profile-card" data-tilt data-animate>
+          <div class="profile-card-glow"></div>
+          <div class="profile-card-inner">
+            <div class="profile-avatar-container">
+              <div class="avatar-ring"></div>
+              <div class="avatar-particles"></div>
+              <div class="profile-avatar">
+                <img src="assets/images/IMG_7892.JPG" alt="Rohan Bawchikar">
+              </div>
+              <div class="avatar-status">
+                <span class="status-dot"></span>
+                <span class="status-text">Available</span>
+              </div>
+            </div>
+
+            <h3 class="profile-name">Rohan Bawchikar</h3>
+            <p class="profile-title">Frontend Developer</p>
+
+            <div class="profile-stats">
+              <div class="stat-item">
+                <span class="stat-number" data-count="10">0</span>+
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-number" data-count="5">0</span>+
+                <span class="stat-label">Skills</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-number" data-count="1">0</span>
+                <span class="stat-label">Month</span>
+              </div>
+            </div>
+
+            <div class="profile-badges">
+              <span class="badge badge-react">
+                <i class="fa-brands fa-react"></i> React
+              </span>
+              <span class="badge badge-js">
+                <i class="fa-brands fa-js"></i> JavaScript
+              </span>
+              <span class="badge badge-html">
+                <i class="fa-brands fa-html5"></i> HTML5
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Info Cards -->
+        <div class="about-info-section">
+
+          <!-- Bio Card -->
+          <div class="info-card bio-card" data-tilt data-animate>
+            <div class="info-card-glow"></div>
+            <div class="info-card-inner">
+              <div class="card-icon-header">
+                <i class="fa-solid fa-user"></i>
+                <h4>Who I Am</h4>
+              </div>
+              <p class="bio-text">
+                Hi! I'm <strong class="highlight-text">Rohan Bawchikar</strong>, a Computer Engineering student
+                with a strong passion for <strong class="highlight-text">Frontend Web Development</strong>.
+                I enjoy bringing creative ideas to life through clean code, modern design, and intuitive user
+                interfaces.
+              </p>
+            </div>
+          </div>
+
+          <!-- Passion Card -->
+          <div class="info-card passion-card" data-tilt data-animate>
+            <div class="info-card-glow"></div>
+            <div class="info-card-inner">
+              <div class="card-icon-header">
+                <i class="fa-solid fa-heart"></i>
+                <h4>What I Love</h4>
+              </div>
+              <div class="passion-grid">
+                <div class="passion-item">
+                  <i class="fa-solid fa-code"></i>
+                  <span>Clean Code</span>
+                </div>
+                <div class="passion-item">
+                  <i class="fa-solid fa-palette"></i>
+                  <span>UI Design</span>
+                </div>
+                <div class="passion-item">
+                  <i class="fa-solid fa-sparkles"></i>
+                  <span>Animations</span>
+                </div>
+                <div class="passion-item">
+                  <i class="fa-solid fa-mobile-screen"></i>
+                  <span>Responsive</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Focus Card -->
+          <div class="info-card focus-card" data-tilt data-animate>
+            <div class="info-card-glow"></div>
+            <div class="info-card-inner">
+              <div class="card-icon-header">
+                <i class="fa-solid fa-bullseye"></i>
+                <h4>Current Focus</h4>
+              </div>
+              <ul class="focus-list">
+                <li>
+                  <div class="focus-icon">
+                    <i class="fa-brands fa-react"></i>
+                  </div>
+                  <div class="focus-content">
+                    <strong>React Development</strong>
+                    <span>Building modern, scalable applications</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="focus-icon">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                  </div>
+                  <div class="focus-content">
+                    <strong>Advanced Animations</strong>
+                    <span>Creating stunning user experiences</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="focus-icon">
+                    <i class="fa-solid fa-rocket"></i>
+                  </div>
+                  <div class="focus-content">
+                    <strong>Performance Optimization</strong>
+                    <span>Fast, efficient web applications</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom CTA Section -->
+      <div class="about-cta" data-animate>
+        <div class="cta-content">
+          <h3 class="cta-title">Let's Create Something Amazing</h3>
+          <p class="cta-text">I'm always excited to collaborate on new projects and innovative ideas</p>
+        </div>
+        <a href="#contact" class="cta-button">
+          <span>Get In Touch</span>
+          <i class="fa-solid fa-arrow-right"></i>
+          <div class="cta-button-glow"></div>
+        </a>
+      </div>
+    </div>
   </section>
 
   <!-- Projects Section -->
@@ -361,24 +537,185 @@
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section class="services" id="services">
-    <h2 class="heading">Services</h2>
-    <div class="services-list">
-      <div class="service" data-animate>
-        <i class="fa-solid fa-code"></i>
-        <h3>Frontend Development</h3>
-        <p>Modern, responsive UIs with clean code and best practices.</p>
+  <!-- Services Section - KILLER ANIMATED VERSION -->
+  <section class="services-killer" id="services">
+    <!-- Animated Background -->
+    <div class="services-bg" aria-hidden="true">
+      <div class="services-orb services-orb-1"></div>
+      <div class="services-orb services-orb-2"></div>
+      <div class="services-orb services-orb-3"></div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div class="services-particles" id="servicesParticles" aria-hidden="true"></div>
+
+    <div class="services-container">
+      <!-- Section Header -->
+      <div class="services-header" data-animate>
+        <h2 class="services-title">
+          <span class="services-title-line">What I</span>
+          <span class="services-title-accent">Offer</span>
+        </h2>
+        <p class="services-subtitle">Premium solutions tailored to bring your vision to life</p>
+        <div class="services-title-underline"></div>
       </div>
-      <div class="service" data-animate>
-        <i class="fa-solid fa-mobile-screen"></i>
-        <h3>Responsive Design</h3>
-        <p>Mobile-first layouts optimized for performance and accessibility.</p>
+
+      <!-- Services Grid -->
+      <div class="services-grid">
+
+        <!-- Service 1: Frontend Development -->
+        <div class="service-card" data-tilt data-animate data-service="frontend">
+          <div class="service-card-glow"></div>
+          <div class="service-card-inner">
+            <!-- Animated Icon -->
+            <div class="service-icon-container">
+              <div class="service-icon-bg"></div>
+              <div class="service-icon-ring"></div>
+              <i class="fa-solid fa-code service-icon"></i>
+              <div class="service-icon-particles"></div>
+            </div>
+
+            <!-- Content -->
+            <h3 class="service-title">Frontend Development</h3>
+            <p class="service-description">
+              Modern, responsive UIs with clean code and best practices.
+              Building pixel-perfect interfaces that deliver exceptional user experiences.
+            </p>
+
+            <!-- Features List -->
+            <ul class="service-features">
+              <li>
+                <i class="fa-solid fa-check-circle"></i>
+                <span>React & Modern Frameworks</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check-circle"></i>
+                <span>Semantic HTML5 & CSS3</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check-circle"></i>
+                <span>Performance Optimization</span>
+              </li>
+            </ul>
+
+            <!-- Hover Effect Overlay -->
+            <div class="service-hover-overlay"></div>
+          </div>
+        </div>
+
+        <!-- Service 2: Responsive Design -->
+        <div class="service-card" data-tilt data-animate data-service="responsive">
+          <div class="service-card-glow"></div>
+          <div class="service-card-inner">
+            <!-- Animated Icon -->
+            <div class="service-icon-container">
+              <div class="service-icon-bg"></div>
+              <div class="service-icon-ring"></div>
+              <i class="fa-solid fa-mobile-screen service-icon"></i>
+              <div class="service-icon-particles"></div>
+            </div>
+
+            <!-- Content -->
+            <h3 class="service-title">Responsive Design</h3>
+            <p class="service-description">
+              Mobile-first layouts optimized for performance and accessibility.
+              Ensuring your site looks amazing on every device and screen size.
+            </p>
+
+            <!-- Features List -->
+            <ul class="service-features">
+              <li>
+                <i class="fa-solid fa-check-circle"></i>
+                <span>Cross-Device Compatibility</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check-circle"></i>
+                <span>Flexible Grid Systems</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check-circle"></i>
+                <span>Touch-Friendly Interactions</span>
+              </li>
+            </ul>
+
+            <!-- Hover Effect Overlay -->
+            <div class="service-hover-overlay"></div>
+          </div>
+        </div>
+
+        <!-- Service 3: UI Enhancements -->
+        <div class="service-card" data-tilt data-animate data-service="animations">
+          <div class="service-card-glow"></div>
+          <div class="service-card-inner">
+            <!-- Animated Icon -->
+            <div class="service-icon-container">
+              <div class="service-icon-bg"></div>
+              <div class="service-icon-ring"></div>
+              <i class="fa-solid fa-rocket service-icon"></i>
+              <div class="service-icon-particles"></div>
+            </div>
+
+            <!-- Content -->
+            <h3 class="service-title">UI Enhancements</h3>
+            <p class="service-description">
+              Micro-interactions, animations, and delightful user experiences.
+              Creating engaging interfaces that captivate and convert users.
+            </p>
+
+            <!-- Features List -->
+            <ul class="service-features">
+              <li>
+                <i class="fa-solid fa-check-circle"></i>
+                <span>Smooth Animations</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check-circle"></i>
+                <span>Interactive Elements</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check-circle"></i>
+                <span>Premium Visual Effects</span>
+              </li>
+            </ul>
+
+            <!-- Hover Effect Overlay -->
+            <div class="service-hover-overlay"></div>
+          </div>
+        </div>
+
       </div>
-      <div class="service" data-animate>
-        <i class="fa-solid fa-rocket"></i>
-        <h3>UI Enhancements</h3>
-        <p>Micro-interactions, animations, and delightful user experiences.</p>
+
+      <!-- Bottom Stats Section -->
+      <div class="services-stats" data-animate>
+        <div class="stat-box">
+          <div class="stat-icon">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <div class="stat-content">
+            <span class="stat-value" data-count="100">0</span>%
+            <span class="stat-label">Client Satisfaction</span>
+          </div>
+        </div>
+
+        <div class="stat-box">
+          <div class="stat-icon">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <div class="stat-content">
+            <span class="stat-value" data-count="60">0</span> FPS
+            <span class="stat-label">Smooth Animations</span>
+          </div>
+        </div>
+
+        <div class="stat-box">
+          <div class="stat-icon">
+            <i class="fa-solid fa-clock"></i>
+          </div>
+          <div class="stat-content">
+            <span class="stat-value" data-count="24">0</span>/7
+            <span class="stat-label">Support Available</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1439,7 +1776,10 @@
   <script src="js/typing-effect.js"></script>
   <script src="js/contact-showcase.js"></script>
   <script src="js/carousel-journey.js"></script>
+  <script src="js/about-killer.js"></script>
+  <script src="js/services-killer.js"></script>
   <script src="js/ultra-smooth-scroll.js"></script>
+  <script src="js/photo-particles.js"></script>
   <script src="js/main.js"></script>
 </body>
 

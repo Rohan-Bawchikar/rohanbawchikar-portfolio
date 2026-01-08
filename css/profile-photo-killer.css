@@ -1,0 +1,646 @@
+/* =============================================
+   PROFILE PHOTO - KILLER EFFECTS & INSANE ANIMATIONS
+   Mobile & Desktop Optimized
+   ============================================= */
+
+/* Container with enhanced effects */
+.profile-photo-container {
+    position: relative;
+    animation: photoContainerFloat 6s ease-in-out infinite;
+}
+
+@keyframes photoContainerFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Animated Gradient Orbs Behind Photo */
+.photo-orb-bg {
+    position: absolute;
+    inset: -100px;
+    pointer-events: none;
+    z-index: -1;
+    overflow: visible;
+}
+
+.photo-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.5;
+    animation: orbMorph 15s ease-in-out infinite, orbFloat 20s ease-in-out infinite;
+}
+
+.photo-orb-1 {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, #8B5CF6, #3B82F6);
+    top: -50px;
+    left: -50px;
+    animation-delay: 0s;
+}
+
+.photo-orb-2 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #22C55E, #10B981);
+    bottom: -80px;
+    right: -80px;
+    animation-delay: 5s;
+}
+
+.photo-orb-3 {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, #F59E0B, #EF4444);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 10s;
+}
+
+@keyframes orbMorph {
+
+    0%,
+    100% {
+        border-radius: 50% 50% 50% 50%;
+    }
+
+    25% {
+        border-radius: 60% 40% 50% 50%;
+    }
+
+    50% {
+        border-radius: 50% 60% 40% 50%;
+    }
+
+    75% {
+        border-radius: 50% 50% 60% 40%;
+    }
+}
+
+@keyframes orbFloat {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -30px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+}
+
+/* Photo Wrapper with Floating Animation */
+.photo-wrapper {
+    position: relative;
+    animation: wrapperFloat 4s ease-in-out infinite;
+}
+
+@keyframes wrapperFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Morphing Neon Border on Photo Frame */
+.photo-frame {
+    position: relative;
+    padding: 8px;
+    background: linear-gradient(135deg,
+            #8B5CF6, #3B82F6, #22C55E, #F59E0B, #8B5CF6);
+    background-size: 400% 400%;
+    animation:
+        gradientShift 8s ease infinite,
+        framePulse 3s ease-in-out infinite,
+        frameScale 2s ease-in-out infinite;
+    box-shadow:
+        0 0 40px rgba(139, 92, 246, 0.8),
+        0 0 80px rgba(59, 130, 246, 0.6),
+        0 0 120px rgba(34, 197, 94, 0.4),
+        inset 0 0 60px rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes gradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes framePulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 40px rgba(139, 92, 246, 0.8),
+            0 0 80px rgba(59, 130, 246, 0.6),
+            0 0 120px rgba(34, 197, 94, 0.4);
+    }
+
+    50% {
+        box-shadow:
+            0 0 60px rgba(139, 92, 246, 1),
+            0 0 100px rgba(59, 130, 246, 0.8),
+            0 0 140px rgba(34, 197, 94, 0.6);
+    }
+}
+
+@keyframes frameScale {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+/* Hover Effect - Desktop Only */
+@media (min-width: 769px) {
+    .photo-frame:hover {
+        transform: scale(1.08) rotate(5deg);
+        box-shadow:
+            0 0 80px rgba(139, 92, 246, 1),
+            0 0 120px rgba(59, 130, 246, 0.9),
+            0 0 160px rgba(34, 197, 94, 0.7),
+            inset 0 0 80px rgba(255, 255, 255, 0.3);
+        animation-play-state: paused;
+    }
+}
+
+/* Rotating Gradient Glow Ring */
+.photo-border-glow {
+    position: absolute;
+    inset: -20px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg,
+            #8B5CF6, #3B82F6, #22C55E, #F59E0B, #EF4444, #8B5CF6);
+    animation: borderRotate 8s linear infinite;
+    opacity: 0.7;
+    filter: blur(20px);
+    z-index: -1;
+}
+
+@keyframes borderRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Holographic Overlay on Photo */
+.photo-inner {
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-inner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            transparent 30%,
+            rgba(255, 255, 255, 0.1) 40%,
+            rgba(59, 130, 246, 0.2) 50%,
+            rgba(139, 92, 246, 0.2) 60%,
+            transparent 70%);
+    animation: holographicShine 3s linear infinite;
+    pointer-events: none;
+    z-index: 2;
+}
+
+@keyframes holographicShine {
+    0% {
+        transform: translate(-100%, -100%) rotate(45deg);
+    }
+
+    100% {
+        transform: translate(100%, 100%) rotate(45deg);
+    }
+}
+
+/* Photo with Breathing Effect */
+.profile-img {
+    animation: photoBreath 4s ease-in-out infinite;
+    filter: saturate(1.1) contrast(1.05);
+    transition: filter 0.4s ease;
+}
+
+@keyframes photoBreath {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Glitch Effect on Hover - Desktop Only */
+@media (min-width: 769px) {
+    .photo-frame:hover .profile-img {
+        filter: saturate(1.3) contrast(1.1) hue-rotate(10deg);
+        animation: glitchEffect 0.3s infinite;
+    }
+}
+
+@keyframes glitchEffect {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1.05);
+    }
+
+    25% {
+        transform: translate(2px, -2px) scale(1.05);
+    }
+
+    50% {
+        transform: translate(-2px, 2px) scale(1.05);
+    }
+
+    75% {
+        transform: translate(2px, 2px) scale(1.05);
+    }
+}
+
+/* Orbiting Particles */
+.photo-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation: particlesRotate 30s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes particlesRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 1), transparent);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.8);
+    animation: particlePulse 2s ease-in-out infinite;
+}
+
+.particle:nth-child(1) {
+    top: 0;
+    left: 50%;
+    animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+    top: 15%;
+    right: 15%;
+    animation-delay: 0.25s;
+    background: radial-gradient(circle, rgba(59, 130, 246, 1), transparent);
+}
+
+.particle:nth-child(3) {
+    top: 50%;
+    right: 0;
+    animation-delay: 0.5s;
+    background: radial-gradient(circle, rgba(34, 197, 94, 1), transparent);
+}
+
+.particle:nth-child(4) {
+    bottom: 15%;
+    right: 15%;
+    animation-delay: 0.75s;
+    background: radial-gradient(circle, rgba(245, 158, 11, 1), transparent);
+}
+
+.particle:nth-child(5) {
+    bottom: 0;
+    left: 50%;
+    animation-delay: 1s;
+    background: radial-gradient(circle, rgba(239, 68, 68, 1), transparent);
+}
+
+.particle:nth-child(6) {
+    bottom: 15%;
+    left: 15%;
+    animation-delay: 1.25s;
+    background: radial-gradient(circle, rgba(139, 92, 246, 1), transparent);
+}
+
+.particle:nth-child(7) {
+    top: 50%;
+    left: 0;
+    animation-delay: 1.5s;
+    background: radial-gradient(circle, rgba(59, 130, 246, 1), transparent);
+}
+
+.particle:nth-child(8) {
+    top: 15%;
+    left: 15%;
+    animation-delay: 1.75s;
+    background: radial-gradient(circle, rgba(34, 197, 94, 1), transparent);
+}
+
+@keyframes particlePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}
+
+/* Glowing Energy Rings */
+.photo-glow-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 2px solid transparent;
+    pointer-events: none;
+    animation: ringPulse 3s ease-in-out infinite;
+}
+
+.ring-1 {
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    border-color: rgba(139, 92, 246, 0.6);
+    animation-delay: 0s;
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.6);
+}
+
+.ring-2 {
+    width: calc(100% + 80px);
+    height: calc(100% + 80px);
+    border-color: rgba(59, 130, 246, 0.4);
+    animation-delay: 1s;
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.4);
+}
+
+.ring-3 {
+    width: calc(100% + 120px);
+    height: calc(100% + 120px);
+    border-color: rgba(34, 197, 94, 0.3);
+    animation-delay: 2s;
+    box-shadow: 0 0 50px rgba(34, 197, 94, 0.3);
+}
+
+@keyframes ringPulse {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 1;
+    }
+}
+
+/* Enhanced Status Badge with Glow */
+.photo-status {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.9), rgba(16, 185, 129, 0.9));
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(34, 197, 94, 0.5);
+    border-radius: 30px;
+    box-shadow:
+        0 0 30px rgba(34, 197, 94, 0.8),
+        0 10px 40px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    animation: badgeGlow 2s ease-in-out infinite;
+    z-index: 10;
+}
+
+@keyframes badgeGlow {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 30px rgba(34, 197, 94, 0.8),
+            0 10px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    50% {
+        box-shadow:
+            0 0 50px rgba(34, 197, 94, 1),
+            0 10px 40px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow:
+        0 0 20px rgba(255, 255, 255, 1),
+        0 0 40px rgba(34, 197, 94, 0.8);
+    animation: statusPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes statusPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.4);
+        opacity: 0.7;
+    }
+}
+
+.status-text {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.5px;
+}
+
+/* =============================================
+   MOBILE OPTIMIZATIONS
+   ============================================= */
+
+@media (max-width: 768px) {
+
+    /* Reduce animation intensity */
+    .profile-photo-container {
+        animation-duration: 8s;
+    }
+
+    /* COMPLETELY HIDE THE TEAL BOX - Aggressive fix */
+    .photo-orb-bg {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+
+    /* Make orbs invisible if they somehow still show */
+    .photo-orb,
+    .photo-orb-1,
+    .photo-orb-2,
+    .photo-orb-3 {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+
+    /* Remove any background from photo container */
+    .profile-photo-container {
+        background: transparent !important;
+        background-color: transparent !important;
+        background-image: none !important;
+    }
+
+    /* Reduce glow intensity */
+    .photo-frame {
+        box-shadow:
+            0 0 20px rgba(139, 92, 246, 0.6),
+            0 0 40px rgba(59, 130, 246, 0.4);
+    }
+
+    /* Simplify orb effects */
+    .photo-orb {
+        opacity: 0.3;
+        filter: blur(40px);
+    }
+
+    .photo-orb-3 {
+        display: none;
+        /* Hide third orb on mobile */
+    }
+
+    /* Reduce glow intensity */
+    .photo-frame {
+        box-shadow:
+            0 0 20px rgba(139, 92, 246, 0.6),
+            0 0 40px rgba(59, 130, 246, 0.4);
+    }
+
+    /* Hide some rings on mobile */
+    .ring-3 {
+        display: none;
+    }
+
+    /* Reduce particle count */
+    .particle:nth-child(n+5) {
+        display: none;
+    }
+
+    /* Simplify status badge */
+    .photo-status {
+        padding: 8px 16px;
+        bottom: 20px;
+    }
+
+    .status-text {
+        font-size: 12px;
+    }
+
+    .status-dot {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* Extra small mobile */
+@media (max-width: 480px) {
+    .photo-border-glow {
+        opacity: 0.4;
+        filter: blur(15px);
+    }
+
+    .photo-glow-ring {
+        animation-duration: 4s;
+    }
+
+    .photo-status {
+        padding: 6px 12px;
+        bottom: 15px;
+    }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    .profile-photo-container,
+    .photo-wrapper,
+    .photo-frame,
+    .photo-border-glow,
+    .photo-particles,
+    .particle,
+    .photo-glow-ring,
+    .photo-orb,
+    .photo-status,
+    .status-dot,
+    .profile-img {
+        animation: none !important;
+    }
+
+    .photo-inner::before {
+        display: none;
+    }
+}

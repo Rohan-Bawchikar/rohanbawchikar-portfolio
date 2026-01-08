@@ -1,0 +1,670 @@
+/* ========================================
+   COMPREHENSIVE RESPONSIVE ENHANCEMENTS
+   Ensures FULL responsiveness across ALL devices
+   Mobile (<768px), Tablet (768-1024px), Desktop (>1024px)
+   ======================================== */
+
+/* ==================== GLOBAL RESPONSIVE FIXES ==================== */
+
+/* Ensure all sections adapt properly */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+/* Prevent horizontal scroll on all devices */
+body,
+.home,
+section {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* ==================== MOBILE FIRST (< 768px) ==================== */
+
+@media (max-width: 767px) {
+
+    /* General Spacing */
+    section {
+        padding: 60px 5% !important;
+    }
+
+    /* Typography */
+    h1 {
+        font-size: clamp(2rem, 8vw, 3rem) !important;
+    }
+
+    h2.heading,
+    h2.services-title,
+    h2.about-title {
+        font-size: clamp(2rem, 6vw, 2.5rem) !important;
+    }
+
+    h3 {
+        font-size: clamp(1.2rem, 5vw, 1.5rem) !important;
+    }
+
+    p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Navbar Mobile Fixes */
+    .navbar {
+        padding: 15px 5% !important;
+        flex-wrap: nowrap;
+    }
+
+    .navbar ul {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: rgba(10, 10, 26, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 50px;
+        gap: 0;
+        transition: left 0.3s ease;
+        z-index: 99;
+    }
+
+    .navbar ul.active {
+        left: 0;
+    }
+
+    .navbar ul li {
+        margin: 0;
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar ul li a {
+        font-size: 1.2rem !important;
+        display: block;
+        width: 100%;
+    }
+
+    /* Hero/Home Section */
+    .home {
+        flex-direction: column-reverse !important;
+        padding: 100px 5% 60px !important;
+        height: auto !important;
+        min-height: 100vh;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .home-info {
+        max-width: 100% !important;
+        text-align: center;
+    }
+
+    .home-info h1 {
+        font-size: clamp(2rem, 10vw, 3rem) !important;
+    }
+
+    .home-info h2 {
+        font-size: 1.1rem !important;
+    }
+
+    .home-info p {
+        font-size: 0.95rem !important;
+    }
+
+    .home-info .btn-sci {
+        justify-content: center !important;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 12px 24px !important;
+        font-size: 0.95rem !important;
+    }
+
+    /* Profile Photo - Mobile Optimization */
+    .profile-photo-container {
+        width: 280px !important;
+        height: 280px !important;
+        margin: 0 auto !important;
+    }
+
+    /* About Section - Mobile */
+    .about-content-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    .about-profile-card {
+        max-width: 100% !important;
+    }
+
+    .profile-avatar-container {
+        width: 180px !important;
+        height: 180px !important;
+    }
+
+    .profile-stats {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .stat-item {
+        flex: 0 0 30%;
+        min-width: 80px;
+    }
+
+    .stat-divider {
+        display: none !important;
+    }
+
+    .profile-badges {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .passion-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+
+    .about-cta {
+        flex-direction: column !important;
+        padding: 30px 20px !important;
+        text-align: center;
+    }
+
+    .cta-button {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    /* Services Section - Mobile */
+    .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    .service-card-inner {
+        padding: 35px 25px !important;
+    }
+
+    .service-icon-container {
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    .service-icon {
+        font-size: 2.5rem !important;
+    }
+
+    .service-features {
+        gap: 12px !important;
+    }
+
+    .services-stats {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .stat-box {
+        padding: 20px !important;
+    }
+
+    /* Projects Section - Mobile */
+    .project-grid,
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
+    }
+
+    .project-card {
+        margin: 0 !important;
+    }
+
+    /* Skills Section - Mobile */
+    .skills-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .skills-container {
+        padding: 0 !important;
+    }
+
+    /* Journey/Carousel - Mobile */
+    .carousel-journey {
+        padding: 60px 5% !important;
+    }
+
+    .journey-card {
+        min-width: 90% !important;
+        max-width: 350px !important;
+    }
+
+    .carousel-nav {
+        width: 45px !important;
+        height: 45px !important;
+    }
+
+    /* Contact Section - Mobile */
+    .contact-cards,
+    .contact-showcase .contact-cards {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .contact-card {
+        padding: 25px !important;
+    }
+
+    .portfolio-highlights {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+    }
+
+    /* Certifications - Mobile */
+    .certifications-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Footer - Mobile */
+    footer {
+        padding: 40px 5% 30px !important;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        text-align: center;
+    }
+
+    .tech-badges {
+        justify-content: center !important;
+        flex-wrap: wrap;
+    }
+
+    /* Hide decorative elements on mobile for performance */
+    .cursor-dot,
+    .cursor-outline {
+        display: none !important;
+    }
+}
+
+/* ==================== SMALL MOBILE (< 480px) ==================== */
+
+@media (max-width: 479px) {
+
+    /* Extra small spacing */
+    section {
+        padding: 50px 4% !important;
+    }
+
+    .about-killer,
+    .services-killer {
+        padding: 70px 4% 50px !important;
+    }
+
+    /* Typography */
+    h2.heading,
+    h2.services-title,
+    h2.about-title {
+        font-size: 1.8rem !important;
+    }
+
+    .services-title-accent,
+    .about-title-accent {
+        margin-left: 8px !important;
+    }
+
+    /* Profile Photo - Extra Small */
+    .profile-photo-container {
+        width: 240px !important;
+        height: 240px !important;
+    }
+
+    /* About Cards */
+    .info-card-inner {
+        padding: 25px 18px !important;
+    }
+
+    .card-icon-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .card-icon-header i {
+        font-size: 1.5rem !important;
+    }
+
+    .card-icon-header h4 {
+        font-size: 1.1rem !important;
+    }
+
+    /* Services Cards */
+    .service-card-inner {
+        padding: 30px 20px !important;
+    }
+
+    .service-title {
+        font-size: 1.4rem !important;
+    }
+
+    .service-description {
+        font-size: 0.95rem !important;
+    }
+
+    /* Stats */
+    .stat-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 15px !important;
+    }
+
+    .stat-icon {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 1.5rem !important;
+    }
+
+    .stat-value {
+        font-size: 1.6rem !important;
+    }
+
+    /* Journey Cards */
+    .journey-card {
+        min-width: 85% !important;
+        padding: 25px 20px !important;
+    }
+
+    /* Portfolio Highlights */
+    .portfolio-highlights {
+        grid-template-columns: 1fr !important;
+    }
+
+    .highlight-item {
+        padding: 20px !important;
+    }
+}
+
+/* ==================== TABLET (768px - 1024px) ==================== */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* General Spacing */
+    section {
+        padding: 80px 6% !important;
+    }
+
+    .about-killer,
+    .services-killer {
+        padding: 100px 6% 70px !important;
+    }
+
+    /* Hero Section - Tablet */
+    .home {
+        padding: 80px 6% !important;
+        flex-direction: row;
+    }
+
+    .home-info {
+        max-width: 50%;
+    }
+
+    .profile-photo-container {
+        width: 320px !important;
+        height: 320px !important;
+    }
+
+    /* About Section - Tablet */
+    .about-content-grid {
+        grid-template-columns: 1fr !important;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .about-profile-card {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    /* Services - Tablet */
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+        gap: 35px !important;
+    }
+
+    /* Projects - Tablet */
+    .project-grid,
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 30px !important;
+    }
+
+    /* Skills - Tablet */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Contact Cards - Tablet */
+    .contact-cards {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 25px !important;
+    }
+
+    /* Journey - Tablet */
+    .journey-card {
+        min-width: 400px !important;
+    }
+
+    .portfolio-highlights {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* ==================== LARGE DESKTOP (> 1400px) ==================== */
+
+@media (min-width: 1400px) {
+
+    /* Constrain max width for better readability */
+    .about-container,
+    .services-container {
+        max-width: 1600px !important;
+    }
+
+    .services-grid {
+        gap: 50px !important;
+    }
+
+    .about-content-grid {
+        gap: 50px !important;
+    }
+}
+
+/* ==================== LANDSCAPE ORIENTATION FIXES ==================== */
+
+@media (max-width: 900px) and (orientation: landscape) {
+
+    .home {
+        height: auto !important;
+        min-height: 100vh;
+        padding: 100px 5% 50px !important;
+    }
+
+    .profile-photo-container {
+        width: 250px !important;
+        height: 250px !important;
+    }
+
+    .about-killer,
+    .services-killer {
+        min-height: auto !important;
+    }
+
+    .service-card-inner {
+        padding: 30px 25px !important;
+    }
+
+    .about-profile-card .profile-card-inner {
+        padding: 30px 25px !important;
+    }
+}
+
+/* ==================== PRINT STYLES ==================== */
+
+@media print {
+
+    /* Hide non-essential elements */
+    .navbar,
+    .scroll-progress,
+    .cursor-dot,
+    .cursor-outline,
+    .particles,
+    .parallax,
+    .about-particles,
+    .services-particles,
+    .about-bg,
+    .services-bg,
+    .service-card-glow,
+    .profile-card-glow,
+    .info-card-glow,
+    .cta-button-glow,
+    .menu-toggle,
+    #backToTop {
+        display: none !important;
+    }
+
+    /* Ensure proper page breaks */
+    section {
+        page-break-inside: avoid;
+    }
+
+    /* Remove animations */
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    /* Improve print colors */
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    .service-card-inner,
+    .info-card-inner,
+    .profile-card-inner {
+        border: 1px solid #ccc !important;
+        background: white !important;
+    }
+}
+
+/* ==================== ACCESSIBILITY ENHANCEMENTS ==================== */
+
+/* Focus visible for keyboard navigation */
+:focus-visible {
+    outline: 2px solid #6a00ff;
+    outline-offset: 2px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .about-orb,
+    .services-orb,
+    .service-icon-ring,
+    .avatar-ring,
+    .profile-card-glow {
+        animation: none !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+
+    .service-card-inner,
+    .info-card-inner,
+    .profile-card-inner {
+        border: 2px solid currentColor !important;
+    }
+
+    .btn,
+    .cta-button {
+        border: 2px solid currentColor !important;
+    }
+}
+
+/* ==================== TOUCH DEVICE OPTIMIZATIONS ==================== */
+
+@media (hover: none) and (pointer: coarse) {
+
+    /* Larger touch targets */
+    .navbar ul li a,
+    .btn,
+    .cta-button,
+    .contact-card button,
+    .badge {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 14px 24px;
+    }
+
+    /* Remove hover effects that don't work on touch */
+    .service-card:hover,
+    .info-card:hover,
+    .profile-card:hover {
+        transform: none;
+    }
+
+    /* Simplify 3D effects for better performance */
+    [data-tilt] {
+        transform: none !important;
+    }
+}
+
+/* ============ ENSURE NO HORIZONTAL OVERFLOW ==================== */
+
+/* Final catch-all to prevent horizontal scrolling */
+body,
+html,
+.home,
+.about-killer,
+.services-killer,
+section {
+    max-width: 100vw;
+    overflow-x: hidden !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Constrain wide content */
+.services-title,
+.about-title,
+.heading {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}

@@ -4,6 +4,44 @@
 
 @media (max-width: 768px) {
 
+    /* Hide scrollbar for cleaner mobile experience */
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    body {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        /* Override ALL backgrounds with solid color */
+        background: #0f172a !important;
+        background-image: none !important;
+    }
+
+    /* Override theme variables that might be causing teal */
+    :root {
+        --bg1: #0f172a !important;
+        --bg2: #0f172a !important;
+        --bg3: #0f172a !important;
+        --bg4: #0f172a !important;
+    }
+
+    /* Remove ALL backgrounds from home and sections */
+    .home,
+    section.home,
+    #home {
+        background: none !important;
+        background-color: transparent !important;
+        background-image: none !important;
+    }
+
+    /* Hide parallax layers on mobile */
+    .parallax,
+    .parallax .layer,
+    .layer-back,
+    .layer-front {
+        display: none !important;
+    }
+
     /* ========== NAVBAR LAYOUT ========== */
     .navbar {
         display: flex;
